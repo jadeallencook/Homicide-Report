@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homicide Report Plugin</title>
+  <!-- custom css -->
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="simple-grid.min.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div id="homicide-plugin-wrapper">
+    <div class="container">
+      <!-- bio -->
+      <div class="row">
+        <div class="col-3">
+          <div id="current-homicide-photo"></div>
+        </div>
+        <div class="col-9">
+          <h1 id="current-homicide-name"></h1>
+          <span id="current-homicide-summary"></span>
+          <!-- bio tags -->
+          <div class="bio-tag">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            Davis County
+          </div>
+          <div class="bio-tag">
+            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+            Farmington
+          </div>
+          <div class="bio-tag">
+            <i class="fa fa-calendar-o" aria-hidden="true"></i>
+            2017-01-08
+          </div>
+          <div class="bio-tag">
+            <i class="fa fa-bolt" aria-hidden="true"></i>
+            Vehicular
+          </div>
+        </div>
+      </div>
+      <!-- timeline -->
+      <div class="row">
+        <div class="col-12">
+          <div id="timeline-wrapper">
+            <div id="timeline-left" class="timeline-arrow">&#x3c;</div>
+            <div id="the-timeline"></div>
+            <div id="timeline-right" class="timeline-arrow">&#x3e;</div>
+          </div>
+        </div>
+      </div>
+      <!-- map -->
+      <div class="row">
+        <div class="col-12">
+          <div id="homicide-map"></div>
+        </div>
+      </div>
+      <!-- search tags -->
+      <div class="row">
+        <div class="col-3">
+          <div class="homicide-tag homicide-search">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            Select County
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="homicide-tag homicide-search">
+            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+            Select City
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="homicide-tag homicide-search">
+            <i class="fa fa-calendar-o" aria-hidden="true"></i>
+            Select Date
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="homicide-tag homicide-search">
+            <i class="fa fa-bolt" aria-hidden="true"></i>
+            Select Type
+          </div>
+        </div>
+      </div>
+      <!-- homicide victims -->
+      <div class="row" id="homicide-victims">
+      </div>
+    </div>
+    <!-- js -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
