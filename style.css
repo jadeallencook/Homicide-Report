@@ -49,7 +49,7 @@ div.homicide-tag i {
 }
 
 div#homicide-map {
-  background-image: url('images/map.png');
+  
   width: 100%;
   background-size: cover;
   height: 250px;
