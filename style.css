@@ -48,8 +48,11 @@ div.homicide-tag i {
   margin-right: 10px;
 }
 
+div#homicide-bio-section {
+  height: 250px;
+}
+
 div#homicide-map {
-  
   width: 100%;
   background-size: cover;
   height: 250px;
