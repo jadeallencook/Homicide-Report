@@ -65,8 +65,13 @@ class HomicideApp {
       this.generateCalendar(this.currentMonth);
     });
     document.addEventListener('click', (event) => {
-      if (event.path[0].id.indexOf('homicide-dot-') !== -1) {
-        const num = parseInt(event.path[0].id.replace('homicide-dot-', ''));
+      // get id for chrome and safari
+      let id = '';
+      if (!event.path) id = event.srcElement.id;
+      else id = event.path[0].id;
+      // show homicide
+      if (id.indexOf('homicide-dot-') !== -1) {
+        const num = parseInt(id.replace('homicide-dot-', ''));
         this.showHomicide(this.homicides[num]);
       }
     });
