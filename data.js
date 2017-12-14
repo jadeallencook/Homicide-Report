@@ -46,6 +46,17 @@ const homicides = [{
     "allegedMotive": "TBA"
   },
   {
+    "timestamp": "2017-12-06T17:55:47.766Z",
+    "first": "Elaine",
+    "last": "Manning",
+    "age": 67,
+    "summary": "Police say Michael Gregory Vandemerwe, 24, shot his father, Gregory Vandemerwe, 46, and grandmother, Elaine Manning, 67, in their home, 3995 S. 1500 West. Gregory Vandemerwe was pronounced dead at the scene and Manning died two weeks later, on Feb. 8. Police say Vandemerwe's grandfather was stabbed but survived. Vandemerwe is charged with two counts of aggravated murder, a capital offense.",
+    "location": "40.684787, -111.934381",
+    "date": "2017-01-24T07:00:00.000Z",
+    "type": "Shooting",
+    "image": "https://drive.google.com/open?id=11LTtu4Nzk7sI205eC-BVL5Ta4n2AIQf5"
+  },
+  {
     "timestamp": "2017-12-06T17:52:08.623Z",
     "first": "Bryan",
     "last": "Brooks",
@@ -56,17 +67,6 @@ const homicides = [{
     "type": "Shooting",
     "image": "https://drive.google.com/open?id=1QJpx96-9rcB0YRCgDY8JUu0iVWdCrXZI",
     "allegedMotive": "TBA"
-  },
-  {
-    "timestamp": "2017-12-06T17:55:47.766Z",
-    "first": "Elaine",
-    "last": "Manning",
-    "age": 67,
-    "summary": "Police say Michael Gregory Vandemerwe, 24, shot his father, Gregory Vandemerwe, 46, and grandmother, Elaine Manning, 67, in their home, 3995 S. 1500 West. Gregory Vandemerwe was pronounced dead at the scene and Manning died two weeks later, on Feb. 8. Police say Vandemerwe's grandfather was stabbed but survived. Vandemerwe is charged with two counts of aggravated murder, a capital offense.",
-    "location": "40.684787, -111.934381",
-    "date": "2017-01-24T07:00:00.000Z",
-    "type": "Shooting",
-    "image": "https://drive.google.com/open?id=11LTtu4Nzk7sI205eC-BVL5Ta4n2AIQf5"
   },
   {
     "timestamp": "2017-12-07T01:42:36.623Z",

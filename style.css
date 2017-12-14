@@ -33,8 +33,56 @@ div.homicide-tag {
   color: #fff;
   padding: 5px 10px;
   box-sizing: border-box;
+  white-space: nowrap;
+  position: relative;
+}
+
+div#search-homicides-wrapper {
+  height: 45px;
+}
+
+div#search-homicides-wrapper div.col-3 {
+  position: relative;
+  height: 25px;
+}
+
+div#search-homicides-wrapper div div.homicide-search {
+  width: 100%;
+  position: absolute;
+}
+
+div.search-dropdown-content {
+  margin-left: -10px;
+  margin-top: 5px;
+  position: absolute;
+  z-index: 9999;
+  background-color: #777;
+  width: 100%;
+  display: none;
+  margin-bottom: 25px;
+}
+
+div.search-dropdown-content ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+div.search-dropdown-content ul li {
   overflow: hidden;
   white-space: nowrap;
+  padding: 5px 10px;
+}
+div.search-dropdown-content ul li:hover {
+  background-color: #333;
+}
+
+div.search-dropdown-content ul li {
+  color: #fff;
+}
+
+div.homicide-tag:hover div.search-dropdown-content {
+  display: block;
 }
 
 div.bio-tag {
@@ -66,24 +114,29 @@ div.victim-image {
   margin: 0px auto;
   background-size: cover;
   background-position: center center;
+  border: thick solid white;
 }
 
 div.victim-image:hover,
-div.homicide-search:hover,
 div.timeline-arrow:hover {
   opacity: 0.75;
   cursor: pointer;
 }
 
+div.homicide-search:hover {
+  cursor: pointer;
+}
+
 div#timeline-wrapper {
   width: 100%;
+  height: 50px;
   border: solid thin #333;
   white-space: nowrap;
 }
 
 div.timeline-arrow {
   height: 50px;
-  width: 25px;
+  width: 100%;
   font-size: 2em;
   display: inline-block;
   background-color: #333;
@@ -91,6 +144,12 @@ div.timeline-arrow {
   text-align: center;
   margin: 0px;
   line-height: 50px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 div#timeline-right {
@@ -98,9 +157,75 @@ div#timeline-right {
 }
 
 div#the-timeline {
-  width: 90%;
-  position: absolute;
+  width: 100%;
   height: 25px;
   border-bottom: solid thin #333;
+}
+
+div.timeline-date {
   display: inline-block;
+  width: 25%;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+div.timeline-dot-container {
+  display: inline-block;
+  width: 25%;
+  height: 100%;
+  text-align: left;
+  position: relative;
+  margin-left: -2px;
+}
+
+div.timeline-dot {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 5px;
+  position: absolute;
+  display: inline-block;
+  margin-top: 20px;
+  z-index: 9;
+}
+
+div.timeline-dot:hover {
+  cursor: pointer;
+}
+
+div#color-guide {
+  text-align: center;
+  font-size: 0.75em;
+  width: 100%;
+}
+
+div#color-guide * {
+  float: none;
+  vertical-align: top;
+}
+
+div#color-guide div.color-guide-color {
+  margin: .5rem 0px;
+}
+
+div#color-guide span {
+  display: inline-block;
+  margin: 4px 15px 0px 5px;
+}
+
+div.color-guide-color {
+  background-color: #333;
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 10px 0px 0px 0px;
+}
+
+div#color-red {
+  background-color: red;
+}
+
+div#color-green {
+  background-color: #0F0;
 }
