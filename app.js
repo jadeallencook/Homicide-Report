@@ -14,6 +14,7 @@ class HomicideApp {
       type: document.getElementById('current-homicide-type')
     }
     this.homicides = homicides;
+    this.refined = this.homicides;
     this.profileID = 0;
     this.googleURL = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=';
     this.googleAPI = '&key=AIzaSyCXllb7HBvBT_nv5jF0dxjaRAo4T6D34xw';
@@ -76,17 +77,31 @@ class HomicideApp {
       }
     });
     // add search event listeners
-    document.getElementById('search-county').addEventListener('click', () => {
-      console.log(true);
+    document.getElementById('search-county').addEventListener('click', (event) => {
+      const county = event.target.getAttribute('value');
+      this.refined = [];
+      for (let homicide of this.homicides) {
+        if (homicide.county === county) {
+          this.refined.push(homicide);
+        }
+      }
+      this.showVictims();
     });
     document.getElementById('search-city').addEventListener('click', () => {
-      console.log(true);
+      const city = event.target.getAttribute('value');
+      let refined = [];
+      for (let homicide of this.homicides) {
+        if (homicide.city === city) {
+          refined.push(homicide);
+        }
+      }
+      this.showVictims(refined);
     });
     document.getElementById('search-date').addEventListener('click', () => {
-      console.log(true);
+      const date = event.target.getAttribute('value');
     });
     document.getElementById('search-type').addEventListener('click', () => {
-      console.log(true);
+      const type = event.target.getAttribute('value');
     });
   }
   // show selected homicide
@@ -122,17 +137,18 @@ class HomicideApp {
     this.generateCalendar();
   }
   // show victim results
-  showVictims(results) {
-    if (!results) results = this.homicides;
+  showVictims() {
     this.elems.victims.innerHTML = '';
-    for (let x = 0, max = --results.length; x < max; x++) {
-      let html = '<div class="col-2">';
-      html += '<div class="victim-image" id="victim-' + x + '" style="background-image: url(' + this.getPhotoURL(results[x].image) + ')"></div>';
+    for (let x = 0, max = this.homicides.length; x < max; x++) {
+      let style = '';
+      if (this.refined.indexOf(this.homicides[x]) === -1) style = 'style="display: none"';
+      let html = '<div class="col-2" ' + style + '>';
+      html += '<div class="victim-image" id="victim-' + x + '" style="background-image: url(' + this.getPhotoURL(this.homicides[x].image) + ')"></div>';
       html += '</div>';
       this.elems.victims.innerHTML += html;
     }
     // add event listeners
-    for (let x = 0, max = results.length; x < max; x++) {
+    for (let x = 0, max = this.homicides.length; x < max; x++) {
       document.getElementById('victim-' + x).addEventListener('click', () => {
         this.showHomicide(this.homicides[x]);
       });
@@ -194,8 +210,12 @@ class HomicideApp {
   }
   // get photo url from google
   getPhotoURL(url) {
-    const id = url.replace('https://drive.google.com/open?id=', '');
-    return 'https://drive.google.com/a/deseretnews.com/uc?export=view&id=' + id;
+    if (!url) {
+      return 'http://d3gqasl9vmjfd8.cloudfront.net/7fc335c7-0ce6-44c3-a5bf-fce15e63ffaa.jpg';
+    } else {
+      const id = url.replace('https://drive.google.com/open?id=', '');
+      return 'https://drive.google.com/a/deseretnews.com/uc?export=view&id=' + id;
+    }
   }
   // format date for bio
   formatDate(date) {
@@ -230,9 +250,13 @@ class HomicideApp {
       const list = document.getElementById('search-' + category + '-list');
       list.innerHTML = '';
       for (let value of this.search[category]) {
-        list.innerHTML += '<li>' + value + '</li>';
+        list.innerHTML += '<li class="dropdown-refiner" value="' + value + '">' + value + '</li>';
       }
     }
+  }
+  // refine search
+  refineSearch() {
+
   }
 }
 
