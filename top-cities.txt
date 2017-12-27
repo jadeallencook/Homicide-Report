@@ -1,4 +1,4 @@
-6	West Valley City
+6 West Valley City
 4 Murray
 4 Ogden
 3 Central City
@@ -6,14 +6,14 @@
 3 Kearns
 3 Magna
 3 Springville
-3	West Jordan
+3 West Jordan
 2 Poplar Grove
 2 Roy
 2 Clearfield
 2 Holladay
 2 Sandy
 2 Spanish Fork
-2	Taylorsville
+2 Taylorsville
 1 Adamsville
 1 Ballard
 1 Cedar City
@@ -32,10 +32,10 @@
 1 People's Freeway
 1 Salt Lake City
 1 South Salt Lake
-1	Sunset
-1	Timp
-1	University
-1	Utah County	
-1	West Point
-1	Willard
-1	Yalecrest
+1 Sunset
+1 Timp
+1 University
+1 Utah County  
+1 West Point
+1 Willard
+1 Yalecrest
