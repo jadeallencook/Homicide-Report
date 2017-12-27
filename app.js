@@ -6,6 +6,7 @@ class HomicideApp {
       photo: document.getElementById('current-homicide-photo'),
       name: document.getElementById('current-homicide-name'),
       summary: document.getElementById('current-homicide-summary'),
+      readMore: document.getElementById('read-more'),
       victims: document.getElementById('homicide-victims'),
       map: document.getElementById('homicide-map'),
       county: document.getElementById('current-homicide-county'),
@@ -95,7 +96,7 @@ class HomicideApp {
           refined.push(homicide);
         }
       }
-      this.showVictims(refined);
+      this.showVictims();
     });
     document.getElementById('search-date').addEventListener('click', () => {
       const date = event.target.getAttribute('value');
@@ -123,6 +124,7 @@ class HomicideApp {
     this.elems.photo.style.backgroundImage = 'url(' + this.getPhotoURL(homicide.image) + ')';
     this.elems.name.innerText = homicide.first + ' ' + homicide.last;
     this.elems.summary.innerText = homicide.summary;
+    this.elems.readMore.setAttribute('href', 'https://www.deseretnews.com/search/google?q=+' + homicide.first + '+' + homicide.last);
     this.elems.county.innerText = homicide.county;
     this.elems.town.innerText = homicide.city;
     this.elems.date.innerText = this.formatDate(homicide.date);

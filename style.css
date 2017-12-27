@@ -97,7 +97,7 @@ div.homicide-tag i {
 }
 
 div#homicide-bio-section {
-  height: 250px;
+  min-height: 250px;
 }
 
 div#homicide-map {
