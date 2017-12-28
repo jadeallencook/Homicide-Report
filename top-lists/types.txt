@@ -1,13 +1,13 @@
 [ALL]
-43  Shooting
+47  Shooting
 7   Stabbing
-6   Neglect or abuse
 6   Police
+5   Abuse or neglect
 4   Vehicular
 3   Assault
+2   Strangulation
 2   Unknown or other
 1   Arson
-1   Strangulation
 
 [15-21]
 9 Shooting
