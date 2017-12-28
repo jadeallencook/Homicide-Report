@@ -43,6 +43,7 @@ class HomicideApp {
           this.homicides[this.homicides.indexOf(homicide)].city = location.city;
           this.homicides[this.homicides.indexOf(homicide)].county = location.county;
         }
+        window.homicides = this.homicides;
         // show init homicide after api calls are done
         if (this.homicides.indexOf(homicide) === (this.homicides.length - 1)) {
           this.showHomicide(this.homicides[0]);
@@ -235,8 +236,9 @@ class HomicideApp {
       request.onload = () => {
         if (request.status >= 200 && request.status < 400) {
           const geoData = JSON.parse(request.responseText);
-          const county = geoData.results[0]['address_components'][3]['long_name'],
-            city = geoData.results[0]['address_components'][2]['long_name'];
+          const county = geoData.results[0]['address_components'][4]['long_name'];
+          const address = geoData.results[0].formatted_address;
+          const city = address.substring(address.indexOf(',') + 2, address.indexOf(', UT')).replace(', ', '');
           res({
             city: city,
             county: county

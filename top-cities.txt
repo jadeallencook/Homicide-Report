@@ -1,41 +1,34 @@
-6 West Valley City
-4 Murray
-4 Ogden
-3 Central City
-3 Downtown
-3 Kearns
-3 Magna
-3 Springville
-3 West Jordan
-2 Poplar Grove
-2 Roy
-2 Clearfield
-2 Holladay
-2 Sandy
-2 Spanish Fork
-2 Taylorsville
-1 Adamsville
-1 Ballard
-1 Cedar City
-1 Centerville
-1 Coconino County
-1 Duchesne
-1 Duchesne County
-1 Farmington
-1 Garden City
-1 Glendale
-1 Huntsville
-1 Layton
-1 Lehi
-1 Mount Pleasant
-1 Park City
-1 People's Freeway
-1 Salt Lake City
-1 South Salt Lake
-1 Sunset
-1 Timp
-1 University
-1 Utah County  
-1 West Point
-1 Willard
-1 Yalecrest
+13  Salt Lake City
+6   West Valley City
+4   Murray
+4   Ogden
+3   Kearns
+3   Magna
+3   West Jordan
+3   Springville
+2   Clearfield
+2   Holladay
+2   Roy
+2   Sandy
+2   Spanish Fork
+2   Taylorsville
+1   Adamsville
+1   Altamont
+1   Ballard
+1   Cedar City
+1   Centerville
+1   Duchesne
+1   Farmington
+1   Garden City
+1   Huntsville
+1   Lake Shore Dr
+1   Layton
+1   Lehi
+1   Mt Pleasant
+1   Park City
+1   Payson
+1   Provo
+1   South Salt Lake
+1   Sunset
+1   West Point
+1   Willard
