@@ -35,9 +35,22 @@ div#homicide-plugin-wrapper div.container {
 }
 
 div#homicide-victims {
+  height: 90%;
+}
+
+div#bio-wrapper {
+  height: 100%;
+}
+
+div#homicide-victims,
+div#bio-wrapper {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 90%;
+}
+
+div#homicide-victims::-webkit-scrollbar,
+div#bio-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 div#current-photo-container {
@@ -115,6 +128,7 @@ div.search-dropdown-content ul li {
   white-space: nowrap;
   padding: 5px 10px;
 }
+
 div.search-dropdown-content ul li:hover {
   background-color: #333;
 }
