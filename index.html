@@ -12,111 +12,108 @@
 <body>
   <div id="homicide-plugin-wrapper">
     <div class="container">
-      <!-- bio -->
-      <div class="row" id="homicide-bio-section">
-        <div class="col-3">
-          <div id="current-homicide-photo"></div>
-        </div>
-        <div class="col-9">
-          <h1 id="current-homicide-name"></h1>
-          <!-- bio tags -->
-          <div class="bio-tag">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
-            <span id="current-homicide-county"></span>
-          </div>
-          <div class="bio-tag">
-            <i class="fa fa-location-arrow" aria-hidden="true"></i>
-            <span id="current-homicide-town"></span>
-          </div>
-          <div class="bio-tag">
-            <i class="fa fa-calendar-o" aria-hidden="true"></i>
-            <span id="current-homicide-date"></span>
-          </div>
-          <div class="bio-tag">
-            <i class="fa fa-bolt" aria-hidden="true"></i>
-            <span id="current-homicide-type"></span>
-          </div>
-          <span id="current-homicide-summary"></span>
-          <a id="read-more" target="_blank" href="#">Read More</a>
-        </div>
-      </div>
-      <!-- timeline -->
-      <div class="row">
-        <div class="col-1">
-          <div id="timeline-left" class="timeline-arrow">&#x3c;</div>
-        </div>
-        <div class="col-10">
-          <div id="timeline-wrapper">
-            <div id="the-timeline">
-              <div class="timeline-dot-container"></div>
-              <div class="timeline-dot-container"></div>
-              <div class="timeline-dot-container"></div>
-              <div class="timeline-dot-container"></div>
+      <div class="row" id="row-wrapper">
+        <div class="col-6" id="bio-wrapper">
+          <!-- bio -->
+          <div class="row" id="homicide-bio-section">
+            <div id="current-photo-container">
+              <div id="current-homicide-photo"></div>
             </div>
-            <div class="timeline-date">JAN</div>
-            <div class="timeline-date">FEB</div>
-            <div class="timeline-date">MAR</div>
-            <div class="timeline-date">APR</div>
+            <div>
+              <h1 id="current-homicide-name"></h1>
+              <!-- bio tags -->
+              <div class="bio-tag">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span id="current-homicide-county"></span>
+              </div>
+              <div class="bio-tag">
+                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                <span id="current-homicide-town"></span>
+              </div>
+              <div class="bio-tag">
+                <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                <span id="current-homicide-date"></span>
+              </div>
+              <div class="bio-tag">
+                <i class="fa fa-bolt" aria-hidden="true"></i>
+                <span id="current-homicide-type"></span>
+              </div>
+              <span id="current-homicide-summary"></span>
+              <a id="read-more" target="_blank" href="#">Read More</a>
+            </div>
           </div>
-        </div>
-        <div class="col-1">
-          <div id="timeline-right" class="timeline-arrow">&#x3e;</div>
-        </div>
-        <!-- color guide -->
-        <div class="col-12" id="color-guide">
-          <div class="color-guide-color" id="color-green"></div>
-          <span class="color-label">VEHICULAR</span>
-          <div class="color-guide-color" id="color-red"></div>
-          <span class="color-label">SHOOTING</span>
-        </div>
-      </div>
-      <!-- map -->
-      <div class="row">
-        <div class="col-12">
-          <div id="homicide-map"></div>
-        </div>
-      </div>
-      <!-- search tags -->
-      <div class="row" id="search-homicides-wrapper">
-        <div class="col-3">
-          <div class="homicide-tag homicide-search" id="search-county">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
-            Select County
-            <div class="search-dropdown-content">
-              <ul id="search-county-list"></ul>
+          <!-- timeline -->
+          <div class="row">
+            <div class="col-1">
+              <div id="timeline-left" class="timeline-arrow">&#x3c;</div>
+            </div>
+            <div class="col-10">
+              <div id="timeline-wrapper">
+                <div id="the-timeline">
+                  <div class="timeline-dot-container"></div>
+                  <div class="timeline-dot-container"></div>
+                  <div class="timeline-dot-container"></div>
+                  <div class="timeline-dot-container"></div>
+                </div>
+                <div class="timeline-date">JAN</div>
+                <div class="timeline-date">FEB</div>
+                <div class="timeline-date">MAR</div>
+                <div class="timeline-date">APR</div>
+              </div>
+            </div>
+            <div class="col-1">
+              <div id="timeline-right" class="timeline-arrow">&#x3e;</div>
+            </div>
+            <!-- color guide -->
+            <div class="col-12" id="color-guide">
+              <div class="color-guide-color" id="color-green"></div>
+              <span class="color-label">VEHICULAR</span>
+              <div class="color-guide-color" id="color-red"></div>
+              <span class="color-label">SHOOTING</span>
+            </div>
+          </div>
+          <!-- map -->
+          <div class="row">
+            <div class="col-12">
+              <div id="homicide-map"></div>
             </div>
           </div>
         </div>
-        <div class="col-3">
-          <div class="homicide-tag homicide-search" id="search-city">
-            <i class="fa fa-location-arrow" aria-hidden="true"></i>
-            Select City
-            <div class="search-dropdown-content">
-              <ul id="search-city-list"></ul>
+        <div class="col-6" id="results-wrapper">
+          <!-- search tags -->
+          <div class="row" id="search-homicides-wrapper">
+            <div class="col-4">
+              <div class="homicide-tag homicide-search" id="search-county">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                County
+                <div class="search-dropdown-content">
+                  <ul id="search-county-list"></ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="homicide-tag homicide-search" id="search-date">
+                <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                Date
+                <div class="search-dropdown-content">
+                  <ul id="search-date-list"></ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="homicide-tag homicide-search" id="search-type">
+                <i class="fa fa-bolt" aria-hidden="true"></i>
+                Type
+                <div class="search-dropdown-content">
+                  <ul id="search-type-list"></ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-3">
-          <div class="homicide-tag homicide-search" id="search-date">
-            <i class="fa fa-calendar-o" aria-hidden="true"></i>
-            Select Date
-            <div class="search-dropdown-content">
-              <ul id="search-date-list"></ul>
-            </div>
+          <!-- homicide victims -->
+          <div class="row" id="homicide-victims">
           </div>
         </div>
-        <div class="col-3">
-          <div class="homicide-tag homicide-search" id="search-type">
-            <i class="fa fa-bolt" aria-hidden="true"></i>
-            Select Type
-            <div class="search-dropdown-content">
-              <ul id="search-type-list"></ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- homicide victims -->
-      <div class="row" id="homicide-victims">
       </div>
     </div>
     <!-- js -->

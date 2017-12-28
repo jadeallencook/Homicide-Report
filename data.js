@@ -741,17 +741,6 @@ const homicides = [{
     "image": "https://drive.google.com/open?id=1-8sJvb6rVcbCAmEjfnHueHAhie-1QRGB"
   },
   {
-    "timestamp": "2017-12-26T19:42:22.187Z",
-    "first": "Hudson",
-    "last": "Nokes",
-    "age": 0,
-    "summary": "Police say Clint Corydon Nokes, 19, repeatedly abused his 7-week-old son, Hudson Nokes, between Nov. 26 and Dec. 1, fatally injuring the boy. Police were dispatched to 163 S. 1450 West on a report that Nokes had been trying to burp the baby when the infant went limp and stopped breathing. When interviewed by police, Nokes allegedly said \"he was tired of the baby crying and he finally 'exploded.'\" Nokes told police he would get frustrated and \"chuck\" the infant onto the couch. Nokes is charged with aggravated murder.",
-    "location": "41.111547, -112.054152",
-    "date": "2017-12-02T07:00:00.000Z",
-    "type": "Abuse or neglect",
-    "image": "https://drive.google.com/open?id=1u9QMh_r47neXhaYAwaY9c1DLO1CrDtLg"
-  },
-  {
     "timestamp": "2017-12-26T19:42:22.879Z",
     "first": "Hudson",
     "last": "Nokes",

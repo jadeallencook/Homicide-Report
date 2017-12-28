@@ -1,7 +1,48 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
 div#homicide-plugin-wrapper {
-  padding-top: 25px;
-  max-width: 900px;
+  width: 100%;
+  height: 100%;
   margin: 0px auto;
+}
+
+div#row-wrapper,
+div#bio-wrapper,
+div#results-wrapper {
+  height: 100%;
+}
+
+div#row-wrapper {
+  margin: 0px;
+}
+
+div#bio-wrapper,
+div#results-wrapper {
+  margin: 0px 2%;
+}
+
+div#homicide-plugin-wrapper div.container {
+  margin: 0px;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+div#homicide-victims {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 90%;
+}
+
+div#current-photo-container {
+  display: block;
+  float: none;
 }
 
 div#current-homicide-photo {
@@ -10,6 +51,7 @@ div#current-homicide-photo {
   background-size: cover;
   background-position: center;
   background-color: #333;
+  margin: 25px auto;
 }
 
 h1#current-homicide-name {
@@ -41,7 +83,7 @@ div#search-homicides-wrapper {
   height: 45px;
 }
 
-div#search-homicides-wrapper div.col-3 {
+div#search-homicides-wrapper div.col-4 {
   position: relative;
   height: 25px;
 }
@@ -98,6 +140,7 @@ div.homicide-tag i {
 
 div#homicide-bio-section {
   min-height: 350px;
+  text-align: center;
 }
 
 div#homicide-map {
@@ -110,7 +153,8 @@ div#homicide-map {
 div.victim-image {
   background-color: #333;
   height: 75px;
-  width: 75px;
+  width: 100%;
+  max-width: 75px;
   margin: 0px auto;
   background-size: cover;
   background-position: center center;

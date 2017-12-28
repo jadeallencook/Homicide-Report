@@ -25,7 +25,6 @@ class HomicideApp {
     // add search types
     this.search = {
       county: [],
-      city: [],
       date: [],
       type: []
     }
@@ -37,7 +36,6 @@ class HomicideApp {
       this.getLocation(homicide.location).then((location) => {
         // add results to search
         if (this.search.county.indexOf(location.county) === -1) this.search.county.push(location.county);
-        if (this.search.city.indexOf(location.city) === -1) this.search.city.push(location.city);
         // add city/county to homicide data
         if (this.homicides[this.homicides.indexOf(homicide)]) {
           this.homicides[this.homicides.indexOf(homicide)].city = location.city;
@@ -85,16 +83,6 @@ class HomicideApp {
       for (let homicide of this.homicides) {
         if (homicide.county === county) {
           this.refined.push(homicide);
-        }
-      }
-      this.showVictims();
-    });
-    document.getElementById('search-city').addEventListener('click', () => {
-      const city = event.target.getAttribute('value');
-      let refined = [];
-      for (let homicide of this.homicides) {
-        if (homicide.city === city) {
-          refined.push(homicide);
         }
       }
       this.showVictims();
