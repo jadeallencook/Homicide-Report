@@ -1,0 +1,130 @@
+{
+  "Shooting": {
+    "num": 9,
+    "cases": [{
+      "timestamp": "2017-12-06T17:52:08.623Z",
+      "first": "Bryan",
+      "last": "Brooks",
+      "age": 19,
+      "summary": "Bryan Brooks, 19, of Ogden, was shot near Chapel Park, 152 E. 900 South, in what police say was supposed to be a small drug deal. Boston Crookston, 20, of Layton, and Isaac Cain Lee Valdez, 19, of Layton, are charged with murder.",
+      "location": "41.050572, -111.965149",
+      "date": "2017-01-29T07:00:00.000Z",
+      "type": "Shooting",
+      "image": "https://drive.google.com/open?id=1QJpx96-9rcB0YRCgDY8JUu0iVWdCrXZI",
+      "city": "Layton",
+      "county": "Utah"
+    }, {
+      "timestamp": "2017-12-07T01:42:36.623Z",
+      "first": "Tristen",
+      "last": "Mogadam",
+      "age": 18,
+      "summary": "Tristen Mogadam, 18, of Magna, was shot and killed outside his residence at 3231 S. 8820 West. Charging documents state Isaac Nacdaniel Patton, 18, of Salt Lake City, shot Mogadam after a marijuana deal. Nacdaniel has been charged with murder, a first-degree felony, and five other related charges.",
+      "location": "40.701514, -112.101542",
+      "date": "2017-02-16T07:00:00.000Z",
+      "type": "Shooting",
+      "image": "https://drive.google.com/open?id=1EYnl76O_m15bUV9WMwJy1i4pmCfFaOt-",
+      "city": "Magna",
+      "county": "Utah"
+    }, {
+      "timestamp": "2017-12-25T02:43:03.425Z",
+      "first": "Maria Alegandra",
+      "last": "Ayala",
+      "age": 19,
+      "summary": "Maria Alegandra Ayala, 19, of West Valley City, was shot and killed while driving near an apartment complex at 1090 W. 3990 South, police say. Four teenagers were detained for questioning. Investigators believe at least three of the four teens are documented gang members and that Ayala and the teenagers were associates. No charges had been filed as of Dec. 20.",
+      "location": "40.685736, -111.923058",
+      "date": "2017-04-13T06:00:00.000Z",
+      "type": "Shooting",
+      "image": "https://drive.google.com/open?id=1_eR5dEeRnRurLe6BvCtlffERJbe1zWAq",
+      "city": "Taylorsville",
+      "county": "Utah"
+    }, {
+      "timestamp": "2017-12-25T02:55:56.182Z",
+      "first": "Fernanda",
+      "last": "Aranda",
+      "age": 16,
+      "summary": "Fernando Aranda, 16, of Kearns, was shot and killed near 4700 W. Thayn Drive (3935 South) following an argument between two groups of people. As of Dec. 19 there had been no arrests and no suspects named.",
+      "location": "40.686343, -112.003303",
+      "date": "2017-05-30T06:00:00.000Z",
+      "type": "Shooting",
+      "image": "https://drive.google.com/open?id=1y9huTABsjmERLQC3W4_P78f55CwRjEYv",
+      "city": "West Valley City",
+      "county": "Utah"
+    }, {
+      "timestamp": "2017-12-25T04:39:57.815Z",
+      "first": "Will",
+      "last": "Ryan",
+      "age": 17,
+      "summary": "Will Ryan, 17, was standing in front of his house, 8037 W. 3380 South, when he was killed during a drive-by shooting. A second 17-year-old boy was also injured in the gunfire. As of Dec. 15, no arrests had been made nor charges filed. ",
+      "location": "40.629454, -111.971668",
+      "date": "2017-08-19T06:00:00.000Z",
+      "type": "Shooting",
+      "image": "https://drive.google.com/open?id=15sH0NwmAJ7dqUTN5TWRWi0ZS2xQbQDYO",
+      "city": "West Jordan",
+      "county": "Utah"
+    }, {
+      "timestamp": "2017-12-26T02:39:27.750Z",
+      "first": "Joshua",
+      "last": "Belen",
+      "age": 20,
+      "summary": "The body of Joshua Belen, 20, who was homeless, was found in a parking lot parking lot of the Olympic Oval, 5662 Cougar Lane, after neighbors reported gunshots in the area. The shooting remains under investigation.",
+      "location": "40.647888, -112.008704",
+      "date": "2017-10-22T06:00:00.000Z",
+      "type": "Shooting",
+      "image": "https://drive.google.com/open?id=1MfFqVIHPMpFm9yS2tJ58O1LF9OG1l5Uh",
+      "city": "Kearns",
+      "county": "Utah"
+    }, {
+      "timestamp": "2017-12-26T03:40:40.167Z",
+      "first": "Samantha",
+      "last": "Badel",
+      "age": 16,
+      "summary": "Investigators say Timothy Griffith, 45, shot his wife, Jessica Griffith, 42; his stepdaughter, Samantha Badel, 16; and his son, Alexandre Griffith, 5, before taking a different gun and shooting himself. He also killed the family dog. Their bodies were found in their home, 1502 N. Highway 89, after a concerned neighbor called police because the family hadn't been seen for a few days. The family moved to Utah from Switzerland four months earlier for Timothy Griffith's job.",
+      "location": "40.116719, -111.597733",
+      "date": "2017-11-10T07:00:00.000Z",
+      "type": "Shooting",
+      "image": "https://drive.google.com/open?id=13usJK6mdeXx00slOUqwXVAAq23mGetmm",
+      "city": "Springville",
+      "county": "Utah"
+    }, {
+      "timestamp": "2017-12-26T03:45:10.276Z",
+      "first": "Hunter",
+      "last": "Woodsen",
+      "age": 19,
+      "summary": "Police say Hunter Woodson, 19, was shot and killed by Seth Carreras, 15, when Woodsen tried to sell him spices instead of marijuana during a drug deal. The shooting occurred in the bedroom of Woodson's Sunset home, 1331 N. 400 West. Carreras is charged as an adult with murder.",
+      "location": "41.133178, -112.034263",
+      "date": "2017-11-21T07:00:00.000Z",
+      "type": "Shooting",
+      "image": "https://drive.google.com/open?id=1fY8mrX-JuAWaSNbUt9ja6h4gwugZuP4l",
+      "city": "Sunset",
+      "county": "Utah"
+    }, {
+      "timestamp": "2017-12-27T18:44:59.382Z",
+      "first": "Deryk",
+      "last": "Lowe",
+      "age": 15,
+      "summary": "Deryk Lowe, 15, was accidentally shot and killed in his home, 440 E. Main St., when his 23-year-old brother, Devyn Lowe, took a 9mm handgun out of a backpack believing it was unloaded and the gun discharged. No charges were filed in he shooting.",
+      "location": "40.388124, -111.841703",
+      "date": "2017-10-07T06:00:00.000Z",
+      "type": "Shooting",
+      "image": "https://drive.google.com/open?id=1iCaBkMppX-D4kgMhEEXhmn0lv-APMkji",
+      "city": "Lehi",
+      "county": "Utah"
+    }]
+  },
+  "Unknown or other": {
+    "num": 1,
+    "cases": [{
+      "timestamp": "2017-12-25T02:52:25.088Z",
+      "first": "Jchandra",
+      "last": "Brown",
+      "age": 16,
+      "summary": "Police say Tyerell Przybycien, 18, helped Jchanda Brown, 16, of Spanish Fork, hang herself near Maple Lake, including recording the girl on her cell phone. Przybycien is charged with murder.",
+      "location": "39.959443, -111.694107",
+      "date": "2017-05-05T06:00:00.000Z",
+      "type": "Unknown or other",
+      "image": "https://drive.google.com/open?id=19lfhlAL3ua3wTWX0LvoVC02C8GXk8M_n",
+      "city": "Payson",
+      "county": "United States"
+    }]
+  }
+}
