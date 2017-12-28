@@ -218,17 +218,6 @@ const homicides = [{
     "image": "https://drive.google.com/open?id=1y9huTABsjmERLQC3W4_P78f55CwRjEYv"
   },
   {
-    "timestamp": "2017-12-25T02:59:08.643Z",
-    "first": "Raelle",
-    "last": "Begay",
-    "age": 25,
-    "summary": "Raelle Begay, 25, and Matthew Franklin, 37, both of Page, Arizona were found dead near the Wahweap Swim Beach in the Glen Canyon National Recreation Area. Police believe the two were in a relationship and that Franklin shot Begay before turning the gun on himself.",
-    "location": "37.003135, -111.492549",
-    "date": "2017-06-02T06:00:00.000Z",
-    "type": "Shooting",
-    "image": "https://drive.google.com/open?id=1j03TOG3uVyZxvPg7PAWeznBSX1BMGOgO"
-  },
-  {
     "timestamp": "2017-12-25T03:00:50.692Z",
     "first": "Kathie",
     "last": "Thomas",
