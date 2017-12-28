@@ -1,0 +1,21 @@
+[ALL]
+43  Shooting
+7   Stabbing
+6   Neglect or abuse
+6   Police
+4   Vehicular
+3   Assault
+2   Unknown or other
+1   Arson
+1   Strangulation
+
+[15-21]
+39 Shooting
+2 Unknown or other
+0 Arson
+0 Assault
+0 Neglect or abuse
+0 Police
+0 Stabbing
+0 Strangulation
+0 Vehicular
