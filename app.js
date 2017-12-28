@@ -235,10 +235,12 @@ class HomicideApp {
       request.open('GET', requestURL, true);
       request.onload = () => {
         if (request.status >= 200 && request.status < 400) {
-          const geoData = JSON.parse(request.responseText);
-          const county = geoData.results[0]['address_components'][4]['long_name'];
-          const address = geoData.results[0].formatted_address;
-          const city = address.substring(address.indexOf(',') + 2, address.indexOf(', UT')).replace(', ', '');
+          const geoData = JSON.parse(request.responseText).results[0];
+          let county = geoData['address_components'][3];
+          if (county.types[0] === 'administrative_area_level_2') county = county.long_name;
+          else county = geoData['address_components'][4].long_name;
+          const address = geoData.formatted_address;
+          let city = address.substring(address.indexOf(',') + 2, address.indexOf(', UT')).replace(', ', '');
           res({
             city: city,
             county: county
