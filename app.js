@@ -125,7 +125,8 @@ class HomicideApp {
       lat: lat,
       lng: lng
     });
-    this.generateCalendar();
+    this.currentMonth = Math.floor(new Date(homicide.date).getMonth() / 4) * 4;
+    this.generateCalendar(this.currentMonth);
   }
   // show victim results
   showVictims() {
@@ -183,7 +184,7 @@ class HomicideApp {
       // insert elem into html
       if (month >= this.currentMonth && month < (this.currentMonth + 4)) {
         const container = dotContainers[month - this.currentMonth],
-          id = 'homicide-dot-' + (x + this.currentMonth);
+          id = 'homicide-dot-' + x;
         container.innerHTML = container.innerHTML + '<div class="timeline-dot" id="' + id + '" style="' + css + '"></div>';
       }
     }
