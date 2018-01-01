@@ -230,7 +230,7 @@ class HomicideApp {
   // get photo url from google
   getPhotoURL(url) {
     if (!url) {
-      return 'http://d3gqasl9vmjfd8.cloudfront.net/7fc335c7-0ce6-44c3-a5bf-fce15e63ffaa.jpg';
+      return 'imgs/default.png';
     } else {
       const id = url.replace('https://drive.google.com/open?id=', '');
       return 'https://drive.google.com/a/deseretnews.com/uc?export=view&id=' + id;
