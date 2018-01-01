@@ -177,9 +177,9 @@ class HomicideApp {
       // set border
       let css = 'left:' + left + '; background-color:' + backgroundColor + ';';
       if (this.profileID === x) {
-        css += 'border: solid thin #000; z-index: 9999;';
+        css += 'border: solid thin #000; z-index: 9999; bottom: 10px;';
       } else {
-        css += 'border: solid thin #fff; z-index: 9;';
+        css += 'border: solid thin #fff; z-index: 9; bottom: -6px;';
       }
       // insert elem into html
       if (month >= this.currentMonth && month < (this.currentMonth + 4)) {

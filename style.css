@@ -81,6 +81,9 @@ span#current-homicide-summary {
 span#current-homicide-summary {
   margin-bottom: 10px;
   display: block;
+  height: 150px;
+  display: block;
+  overflow-y: scroll;
 }
 
 div.homicide-tag {
@@ -145,6 +148,7 @@ div.bio-tag {
   display: inline-block;
   margin-right: 10px;
   font-size: 0.9em;
+  margin-bottom: 15px;
 }
 
 div.homicide-tag i {
