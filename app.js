@@ -99,7 +99,7 @@ class HomicideApp {
         this.showVictims();
       }
     });
-    document.getElementById('search-type').addEventListener('click', () => {
+    document.getElementById('search-type').addEventListener('click', (event) => {
       const type = event.target.getAttribute('value');
       if (type) {
         this.refined = [];
@@ -130,7 +130,7 @@ class HomicideApp {
     // set bio section
     this.elems.photo.style.backgroundImage = 'url(' + this.getPhotoURL(homicide.image) + ')';
     this.elems.name.innerText = homicide.first + ' ' + homicide.last;
-    this.elems.summary.innerText = homicide.summary;
+    this.elems.summary.innerHTML = homicide.summary + '<br /><br /><b>Motive: </b><i>' + homicide.allegedMotive + '</i><br /><br />';
     this.elems.readMore.setAttribute('href', 'https://www.deseretnews.com/search/google?q=+' + homicide.first + '+' + homicide.last);
     this.elems.county.innerText = homicide.county;
     this.elems.town.innerText = homicide.city;
@@ -157,6 +157,11 @@ class HomicideApp {
       html += '</div>';
       this.elems.victims.innerHTML += html;
     }
+    this.elems.victims.innerHTML += '<div class="col-12" id="reset-filters">Reset Filters</div>';
+    document.getElementById('reset-filters').addEventListener('click', (event) => {
+      this.refined = this.homicides;
+      this.showVictims();
+    });
     // add event listeners
     for (let x = 0, max = this.homicides.length; x < max; x++) {
       document.getElementById('victim-' + x).addEventListener('click', () => {

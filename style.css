@@ -291,3 +291,12 @@ div#color-red {
 div#color-green {
   background-color: #0F0;
 }
+
+div#reset-filters {
+  text-align: center;
+  cursor: pointer;
+}
+
+div#reset-filters:hover {
+  text-decoration: underline;
+}
