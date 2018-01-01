@@ -87,11 +87,29 @@ class HomicideApp {
       }
       this.showVictims();
     });
-    document.getElementById('search-date').addEventListener('click', () => {
+    document.getElementById('search-date').addEventListener('click', (event) => {
       const date = event.target.getAttribute('value');
+      if (date) {
+        this.refined = [];
+        for (let homicide of this.homicides) {
+          if (date === this.calendarMonths[new Date(homicide.date).getMonth()]) {
+            this.refined.push(homicide);
+          }
+        }
+        this.showVictims();
+      }
     });
     document.getElementById('search-type').addEventListener('click', () => {
       const type = event.target.getAttribute('value');
+      if (type) {
+        this.refined = [];
+        for (let homicide of this.homicides) {
+          if (type === homicide.type) {
+            this.refined.push(homicide);
+          }
+        }
+        this.showVictims();
+      }
     });
   }
   // show selected homicide
