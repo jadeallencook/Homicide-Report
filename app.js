@@ -80,12 +80,14 @@ class HomicideApp {
     document.getElementById('search-county').addEventListener('click', (event) => {
       const county = event.target.getAttribute('value');
       this.refined = [];
-      for (let homicide of this.homicides) {
-        if (homicide.county === county) {
-          this.refined.push(homicide);
+      if (county) {
+        for (let homicide of this.homicides) {
+          if (homicide.county === county) {
+            this.refined.push(homicide);
+          }
         }
+        this.showVictims();
       }
-      this.showVictims();
     });
     document.getElementById('search-date').addEventListener('click', (event) => {
       const date = event.target.getAttribute('value');
@@ -191,11 +193,13 @@ class HomicideApp {
         day = new Date(homicide.date).getDate(),
         left = ((day / 30) * 100) + '%';
       // set dot color
-      let backgroundColor = '#00F';
-      if (homicide.type === 'Vehicular') {
-        backgroundColor = '#0F0';
+      let backgroundColor = 'blue';
+      if (homicide.type === 'Car crash') {
+        backgroundColor = 'green';
       } else if (homicide.type === 'Shooting') {
-        backgroundColor = '#F00';
+        backgroundColor = 'red';
+      } else if (homicide.type === 'Stabbing') {
+        backgroundColor = 'orange';
       }
       // set border
       let css = 'left:' + left + '; background-color:' + backgroundColor + ';';
