@@ -150,7 +150,7 @@ const homicides = [{
   "alleged": "Alleged motive",
   "motive": "Justified defense",
   "city": "Grantsville",
-  "county": "United States"
+  "county": "Tooele County"
 }, {
   "timestamp": "2017-12-25T02:07:12.688Z",
   "first": "Gustavo",
