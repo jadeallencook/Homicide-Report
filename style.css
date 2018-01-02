@@ -84,6 +84,7 @@ span#current-homicide-summary {
   height: 150px;
   display: block;
   overflow-y: scroll;
+  text-align: left;
 }
 
 div.homicide-tag {
@@ -307,4 +308,9 @@ div#reset-filters {
 
 div#reset-filters:hover {
   text-decoration: underline;
+}
+
+div#homicide-victims div.col-2 {
+  display: inline-block;
+  width: 15%;
 }

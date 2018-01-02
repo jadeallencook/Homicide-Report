@@ -6,7 +6,6 @@ class HomicideApp {
       photo: document.getElementById('current-homicide-photo'),
       name: document.getElementById('current-homicide-name'),
       summary: document.getElementById('current-homicide-summary'),
-      readMore: document.getElementById('read-more'),
       victims: document.getElementById('homicide-victims'),
       map: document.getElementById('homicide-map'),
       county: document.getElementById('current-homicide-county'),
@@ -32,27 +31,15 @@ class HomicideApp {
       if (this.search.type.indexOf(homicide.type) === -1) {
         this.search.type.push(homicide.type);
       }
-      // get location using google api
-      this.getLocation(homicide.location).then((location) => {
-        // add results to search
-        if (this.search.county.indexOf(location.county) === -1) this.search.county.push(location.county);
-        // add city/county to homicide data
-        if (this.homicides[this.homicides.indexOf(homicide)]) {
-          this.homicides[this.homicides.indexOf(homicide)].city = location.city;
-          this.homicides[this.homicides.indexOf(homicide)].county = location.county;
-        }
-        window.homicides = this.homicides;
-        // show init homicide after api calls are done
-        if (this.homicides.indexOf(homicide) === (this.homicides.length - 1)) {
-          this.showHomicide(this.homicides[0]);
-        }
-        // apply search data to dropdowns
-        this.createSearchDropdowns();
-      });
+      if (this.search.county.indexOf(homicide.county) === -1) this.search.county.push(homicide.county);
+      if (this.search.type.indexOf(homicide.type) === -1) this.search.type.push(homicide.type);
     }
+    this.search.date = this.calendarMonths;
+    this.createSearchDropdowns();
     this.search.date = this.calendarMonths;
     // init process
     this.showVictims(this.homicides);
+    this.showHomicide(this.homicides[0]);
     // genereate calendar event listeners
     this.generateCalendar();
     document.getElementById('timeline-right').addEventListener('click', () => {
@@ -117,7 +104,7 @@ class HomicideApp {
   // show selected homicide
   showHomicide(homicide) {
     // scroll to top 
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    document.getElementById('current-homicide-photo').scrollIntoView();
     // highlight calendar dot
     this.profileID = this.homicides.indexOf(homicide);
     if (document.getElementById('homicide-dot-' + this.profileID)) {
@@ -132,8 +119,7 @@ class HomicideApp {
     // set bio section
     this.elems.photo.style.backgroundImage = 'url(' + this.getPhotoURL(homicide.image) + ')';
     this.elems.name.innerText = homicide.first + ' ' + homicide.last;
-    this.elems.summary.innerHTML = homicide.summary + '<br /><br /><b>Motive: </b><i>' + homicide.allegedMotive + '</i><br /><br />';
-    this.elems.readMore.setAttribute('href', 'https://www.deseretnews.com/search/google?q=+' + homicide.first + '+' + homicide.last);
+    this.elems.summary.innerHTML = homicide.summary + ' <b>' + homicide.alleged + ': </b><i>' + homicide.motive + '</i> (<a href="https://www.deseretnews.com/search/google?q=+' + homicide.first + '+' + homicide.last + '" target="_blank">Read More</a>)';
     this.elems.county.innerText = homicide.county;
     this.elems.town.innerText = homicide.city;
     this.elems.date.innerText = this.formatDate(homicide.date);
@@ -154,9 +140,11 @@ class HomicideApp {
     for (let x = 0, max = this.homicides.length; x < max; x++) {
       let style = '';
       if (this.refined.indexOf(this.homicides[x]) === -1) style = 'style="display: none"';
-      let html = '<div class="col-2" ' + style + '>';
-      html += '<div class="victim-image" id="victim-' + x + '" style="background-image: url(' + this.getPhotoURL(this.homicides[x].image) + ')"></div>';
-      html += '</div>';
+      let html = `
+        <div class="col-2" ${style}>
+        <div onclick="javascript: 'ga' in window && ga('send', 'event', 'Homicide Victim', 'clicked', 'victim');" class="victim-image" id="victim-${x}" style="background-image: url('${(this.getPhotoURL(this.homicides[x].image))}')"></div>
+        </div>
+      `;
       this.elems.victims.innerHTML += html;
     }
     this.elems.victims.innerHTML += '<div class="col-12" id="reset-filters">Reset Filters</div>';
@@ -191,7 +179,7 @@ class HomicideApp {
       const homicide = this.homicides[x],
         month = new Date(homicide.date).getMonth(),
         day = new Date(homicide.date).getDate(),
-        left = ((day / 30) * 100) + '%';
+        left = ((day / 31) * 90) + '%';
       // set dot color
       let backgroundColor = 'blue';
       if (homicide.type === 'Car crash') {
@@ -230,7 +218,7 @@ class HomicideApp {
   // get photo url from google
   getPhotoURL(url) {
     if (!url) {
-      return 'imgs/default.png';
+      return 'https://media.deseretdigital.com/file/88aa4c1731?resize=width_800&type=png&c=14&a=af527bd9';
     } else {
       const id = url.replace('https://drive.google.com/open?id=', '');
       return 'https://drive.google.com/a/deseretnews.com/uc?export=view&id=' + id;
@@ -284,5 +272,6 @@ class HomicideApp {
 
 // callback for google api
 function initHomicideApp() {
+  if ('ga' in window) ga('send', 'event', 'Category', 'action', 'Label');
   new HomicideApp();
 }

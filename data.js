@@ -8,7 +8,10 @@ const homicides = [{
   "date": "2017-01-08T07:00:00.000Z",
   "type": "Car crash",
   "image": "https://drive.google.com/open?id=1yQWJHCDnVPqJwkiZGjGuC1vWmGOm8CJH",
-  "allegedMotive": "Recklessness, drugs"
+  "alleged": "Motive",
+  "motive": "Recklessness, drugs",
+  "city": "Farmington",
+  "county": "Davis County"
 }, {
   "timestamp": "2017-12-06T17:02:07.736Z",
   "first": "Louann ",
@@ -19,7 +22,10 @@ const homicides = [{
   "date": "2017-01-13T07:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1t4mWt5DE6gqY7Ld-g3azlcd9i5a1LOnl",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Motive",
+  "motive": "Unknown domestic",
+  "city": "Salt Lake City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-06T17:16:23.197Z",
   "first": "Ernest Pepe ",
@@ -30,7 +36,10 @@ const homicides = [{
   "date": "2017-01-22T07:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1Oexn4JqZIS1koD9sLNxKyay5yogb-cRx",
-  "allegedMotive": "Unknown"
+  "alleged": "Motive",
+  "motive": "Unknown",
+  "city": "Ogden",
+  "county": "Weber County"
 }, {
   "timestamp": "2017-12-06T17:27:26.811Z",
   "first": "Gregory",
@@ -41,7 +50,10 @@ const homicides = [{
   "date": "2017-01-24T07:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1_UumoJS8KZQwsG0-2KDlK6lMXTWtTLJR",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Motive",
+  "motive": "Unknown domestic",
+  "city": "Murray",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-06T17:55:47.766Z",
   "first": "Elaine",
@@ -52,7 +64,10 @@ const homicides = [{
   "date": "2017-01-24T07:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=11LTtu4Nzk7sI205eC-BVL5Ta4n2AIQf5",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Alleged motive",
+  "motive": "Unknown domestic",
+  "city": "Murray",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-06T17:52:08.623Z",
   "first": "Bryan",
@@ -63,7 +78,10 @@ const homicides = [{
   "date": "2017-01-29T07:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1QJpx96-9rcB0YRCgDY8JUu0iVWdCrXZI",
-  "allegedMotive": "Drugs, robbery"
+  "alleged": "Alleged motive",
+  "motive": "Drugs, robbery",
+  "city": "Layton",
+  "county": "Davis County"
 }, {
   "timestamp": "2017-12-07T01:42:36.623Z",
   "first": "Tristen",
@@ -74,7 +92,10 @@ const homicides = [{
   "date": "2017-02-16T07:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1EYnl76O_m15bUV9WMwJy1i4pmCfFaOt-",
-  "allegedMotive": " Drugs, robbery, gangs"
+  "alleged": "Motive",
+  "motive": " Drugs, robbery, gangs",
+  "city": "Magna",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-07T04:44:58.890Z",
   "first": "Melvin",
@@ -84,18 +105,10 @@ const homicides = [{
   "location": "40.728132, -111.894262",
   "date": "2017-02-17T07:00:00.000Z",
   "type": "Shooting",
-  "allegedMotive": "Drugs, robbery"
-}, {
-  "timestamp": "2017-12-25T03:49:30.668Z",
-  "first": "Nicolas",
-  "last": "Sanchez",
-  "age": 38,
-  "summary": "Nicolas Sanchez, 38, of Layton, was shot and killed by police officers after they were called to a trespassing incident at a Texaco station, 4395 S. 1900 West. Two officers confronted Sanchez and spotted a gun, then chased him across the parking lot. As one officer struggled with Sanchez on the ground, the other fired. The officer on the ground also fired at Sanchez. Sixteen shots were fired. The actions of the officers, Cash Ricks and Robert Jackson, were determined to be legally justified.",
-  "location": "41.183985, -112.026385",
-  "date": "2017-02-21T07:00:00.000Z",
-  "type": "Police",
-  "image": "https://drive.google.com/open?id=1ynYLFVtIaa8upEdWlyb50lg-zRx5-4wu",
-  "allegedMotive": "Justified defense"
+  "alleged": "Alleged motive",
+  "motive": "Drugs, robbery",
+  "city": "Salt Lake City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T01:52:34.569Z",
   "first": "Bartolo Justice ",
@@ -106,7 +119,24 @@ const homicides = [{
   "date": "2017-02-21T07:00:00.000Z",
   "type": "Police",
   "image": "https://drive.google.com/open?id=1aGSlsDJaSzHESY7dARAABH1QHco0nvj-",
-  "allegedMotive": "Justified defense"
+  "alleged": "Motive",
+  "motive": "Justified defense",
+  "city": "Ogden",
+  "county": "Weber County"
+}, {
+  "timestamp": "2017-12-25T03:49:30.668Z",
+  "first": "Nicolas",
+  "last": "Sanchez",
+  "age": 38,
+  "summary": "Nicolas Sanchez, 38, of Layton, was shot and killed by police officers after they were called to a trespassing incident at a Texaco station, 4395 S. 1900 West. Two officers confronted Sanchez and spotted a gun, then chased him across the parking lot. As one officer struggled with Sanchez on the ground, the other fired. The officer on the ground also fired at Sanchez. Sixteen shots were fired. The actions of the officers, Cash Ricks and Robert Jackson, were determined to be legally justified.",
+  "location": "41.183985, -112.026385",
+  "date": "2017-02-21T07:00:00.000Z",
+  "type": "Police",
+  "image": "https://drive.google.com/open?id=1ynYLFVtIaa8upEdWlyb50lg-zRx5-4wu",
+  "alleged": "Motive",
+  "motive": "Justified defense",
+  "city": "Roy",
+  "county": "Weber County"
 }, {
   "timestamp": "2017-12-25T02:04:09.966Z",
   "first": "Barry Michael",
@@ -117,7 +147,10 @@ const homicides = [{
   "date": "2017-02-26T07:00:00.000Z",
   "type": "Police",
   "image": "https://drive.google.com/open?id=1EEANiyL8-Zf02AYwkkJ6zekaZSjS3RVI",
-  "allegedMotive": "Justified defense"
+  "alleged": "Alleged motive",
+  "motive": "Justified defense",
+  "city": "Grantsville",
+  "county": "United States"
 }, {
   "timestamp": "2017-12-25T02:07:12.688Z",
   "first": "Gustavo",
@@ -128,7 +161,10 @@ const homicides = [{
   "date": "2017-03-12T07:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1L5c2fr2c9HvzYb8W6veVvo1rjXDobM4R",
-  "allegedMotive": "Robbery, gangs"
+  "alleged": "Motive",
+  "motive": "Robbery, gangs",
+  "city": "Provo",
+  "county": "Utah County"
 }, {
   "timestamp": "2017-12-25T02:10:08.589Z",
   "first": "Chad",
@@ -139,7 +175,10 @@ const homicides = [{
   "date": "2017-03-24T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1al8GrqQh-CnX9BQs8RZr4XjoWa2TwL4h",
-  "allegedMotive": "Anger, domestic"
+  "alleged": "Motive",
+  "motive": "Anger, domestic",
+  "city": "Spanish Fork",
+  "county": "Utah County"
 }, {
   "timestamp": "2017-12-25T02:12:21.863Z",
   "first": "Puleaga Danny",
@@ -150,7 +189,10 @@ const homicides = [{
   "date": "2017-03-30T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1d0zqaIf6Ibft-gQhyjGkM2TZuBJU9aT0",
-  "allegedMotive": "Self-defense"
+  "alleged": "Alleged motive",
+  "motive": "Self-defense",
+  "city": "Salt Lake City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T02:22:26.797Z",
   "first": "Kammy",
@@ -161,7 +203,10 @@ const homicides = [{
   "date": "2017-03-31T06:00:00.000Z",
   "type": "Assault",
   "image": "https://drive.google.com/open?id=1Qdcenm-EsTO5ySenF5lRh9A-Z1R7Scbo",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Motive",
+  "motive": "Unknown domestic",
+  "city": "Mt Pleasant",
+  "county": "Sanpete County"
 }, {
   "timestamp": "2017-12-25T02:45:00.014Z",
   "first": "Matthew",
@@ -172,7 +217,10 @@ const homicides = [{
   "date": "2017-04-01T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1zLRnSJrZ1pX5t6Osl8tv2rV0TdxYGAdM",
-  "allegedMotive": "Robbery"
+  "alleged": "Motive",
+  "motive": "Robbery",
+  "city": "South Salt Lake",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T02:43:03.425Z",
   "first": "Maria Alegandra",
@@ -183,7 +231,10 @@ const homicides = [{
   "date": "2017-04-13T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1_eR5dEeRnRurLe6BvCtlffERJbe1zWAq",
-  "allegedMotive": "Unknown, gangs"
+  "alleged": "Alleged motive",
+  "motive": "Unknown, gangs",
+  "city": "Taylorsville",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T02:47:31.523Z",
   "first": "Gaej",
@@ -194,7 +245,10 @@ const homicides = [{
   "date": "2017-04-17T06:00:00.000Z",
   "type": "Abuse",
   "image": "https://drive.google.com/open?id=10kw4pvo_W667fkSWHNC9hBzguOP8Sjve",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Alleged motive",
+  "motive": "Unknown domestic",
+  "city": "Cedar City",
+  "county": "Iron County"
 }, {
   "timestamp": "2017-12-25T02:52:25.088Z",
   "first": "Jchandra",
@@ -205,7 +259,10 @@ const homicides = [{
   "date": "2017-05-05T06:00:00.000Z",
   "type": "Hanging",
   "image": "https://drive.google.com/open?id=19lfhlAL3ua3wTWX0LvoVC02C8GXk8M_n",
-  "allegedMotive": "Suicide assist"
+  "alleged": "Alleged motive",
+  "motive": "Suicide assist",
+  "city": "Payson",
+  "county": "United States"
 }, {
   "timestamp": "2017-12-25T02:54:18.899Z",
   "first": "Roger",
@@ -216,7 +273,10 @@ const homicides = [{
   "date": "2017-05-10T06:00:00.000Z",
   "type": "Stabbing",
   "image": "https://drive.google.com/open?id=1xsz3AoPXK3q5zUNNm4gaQ2tcArQW63U4",
-  "allegedMotive": "Domestic, possible mental illness"
+  "alleged": "Motive",
+  "motive": "Domestic, possible mental illness",
+  "city": "Huntsville",
+  "county": "Weber County"
 }, {
   "timestamp": "2017-12-27T22:32:33.555Z",
   "first": "William",
@@ -226,7 +286,10 @@ const homicides = [{
   "location": "37.217143, -109.188268",
   "date": "2017-05-18T06:00:00.000Z",
   "type": "Shooting",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Motive",
+  "motive": "Unknown domestic",
+  "city": "Montezuma Creek",
+  "county": "United States"
 }, {
   "timestamp": "2017-12-25T02:55:56.182Z",
   "first": "Fernanda",
@@ -237,7 +300,10 @@ const homicides = [{
   "date": "2017-05-30T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1y9huTABsjmERLQC3W4_P78f55CwRjEYv",
-  "allegedMotive": "Unknown"
+  "alleged": "Motive",
+  "motive": "Unknown",
+  "city": "West Valley City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T03:00:50.692Z",
   "first": "Kathie",
@@ -248,18 +314,10 @@ const homicides = [{
   "date": "2017-06-05T06:00:00.000Z",
   "type": "Arson",
   "image": "https://drive.google.com/open?id=1ZWwdWu6pJcWQOqgUW_JD53m-eusvpVTg",
-  "allegedMotive": "Unknown domestic"
-}, {
-  "timestamp": "2017-12-25T03:11:50.527Z",
-  "first": "Jase",
-  "last": "Rackley",
-  "age": 6,
-  "summary": "Memorez Rackley, 39, of Sandy, and her 6-year-old son, Jase Rackley, were shot and killed by Jeremy Patterson, 32, near the corner of Alta Canyon Drive and Snowville Drive as they were walking through their neighborhood after school. Police say Rackley had a relationship with Patterson. Patterson also shot and injured Rackley's 11-year-old son and the 8-year-old daughter of a woman who attempted to help the family, then turned the gun on himself. Social media posts revealed that Patterson made threats toward the woman for keeping their relationship a secret.",
-  "location": "40.594299, -111.826813",
-  "date": "2017-06-06T06:00:00.000Z",
-  "type": "Shooting",
-  "image": "https://drive.google.com/open?id=1j7-m2GIZPxPOEuAmERgmJU349XWY0xnl",
-  "allegedMotive": "Domestic"
+  "alleged": "Motive",
+  "motive": "Unknown domestic",
+  "city": "West Valley City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T03:08:54.865Z",
   "first": "Memorez",
@@ -270,7 +328,24 @@ const homicides = [{
   "date": "2017-06-06T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1RjJuBenxVlolhQSTz_cjSew196iw4Jqt",
-  "allegedMotive": "Domestic"
+  "alleged": "Motive",
+  "motive": "Domestic",
+  "city": "Sandy",
+  "county": "Salt Lake County"
+}, {
+  "timestamp": "2017-12-25T03:11:50.527Z",
+  "first": "Jase",
+  "last": "Rackley",
+  "age": 6,
+  "summary": "Memorez Rackley, 39, of Sandy, and her 6-year-old son, Jase Rackley, were shot and killed by Jeremy Patterson, 32, near the corner of Alta Canyon Drive and Snowville Drive as they were walking through their neighborhood after school. Police say Rackley had a relationship with Patterson. Patterson also shot and injured Rackley's 11-year-old son and the 8-year-old daughter of a woman who attempted to help the family, then turned the gun on himself. Social media posts revealed that Patterson made threats toward the woman for keeping their relationship a secret.",
+  "location": "40.594299, -111.826813",
+  "date": "2017-06-06T06:00:00.000Z",
+  "type": "Shooting",
+  "image": "https://drive.google.com/open?id=1j7-m2GIZPxPOEuAmERgmJU349XWY0xnl",
+  "alleged": "Alleged motive",
+  "motive": "Domestic",
+  "city": "Sandy",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T03:13:41.183Z",
   "first": "Jeremy",
@@ -281,7 +356,10 @@ const homicides = [{
   "date": "2017-06-07T06:00:00.000Z",
   "type": "Car crash",
   "image": "https://drive.google.com/open?id=18qzcWZwY7funIGcCYYDeOQ0HFyEGiAoE",
-  "allegedMotive": "Anger"
+  "alleged": "Alleged motive",
+  "motive": "Anger",
+  "city": "West Valley City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T03:16:05.841Z",
   "first": "Thomas",
@@ -292,7 +370,10 @@ const homicides = [{
   "date": "2017-06-11T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1_o9LRRa686Sk0GeKeYJx0EthWXvJd7Cx",
-  "allegedMotive": "Fight"
+  "alleged": "Motive",
+  "motive": "Fight",
+  "city": "Murray",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T03:19:49.621Z",
   "first": "Sandra",
@@ -302,7 +383,10 @@ const homicides = [{
   "location": "38.257753, -112.799359",
   "date": "2017-06-17T06:00:00.000Z",
   "type": "Shooting",
-  "allegedMotive": "Domestic, health"
+  "alleged": "Motive",
+  "motive": "Domestic, health",
+  "city": "Adamsville",
+  "county": "Beaver County"
 }, {
   "timestamp": "2017-12-25T03:21:59.374Z",
   "first": "Eli Ray",
@@ -313,7 +397,10 @@ const homicides = [{
   "date": "2017-06-20T06:00:00.000Z",
   "type": "Stabbing",
   "image": "https://drive.google.com/open?id=1WaACt8_C-JYpIZCrtgIUKrZzRg7bUABw",
-  "allegedMotive": "Unknown"
+  "alleged": "Motive",
+  "motive": "Unknown",
+  "city": "Altamont",
+  "county": "United States"
 }, {
   "timestamp": "2017-12-25T03:27:45.634Z",
   "first": "Richelle",
@@ -324,7 +411,10 @@ const homicides = [{
   "date": "2017-06-22T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1VLWc1Dn4Fk9rwtiNAwKziizqWDJYih8N",
-  "allegedMotive": "Domestic"
+  "alleged": "Motive",
+  "motive": "Domestic",
+  "city": "Salt Lake City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T03:32:08.349Z",
   "first": "Jill",
@@ -335,7 +425,10 @@ const homicides = [{
   "date": "2017-06-28T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1BdkC_3cY_v7ffz9pJaAvphjn78a40WL9",
-  "allegedMotive": "Domestic"
+  "alleged": "Motive",
+  "motive": "Domestic",
+  "city": "West Jordan",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T03:36:03.677Z",
   "first": "Cody Ray",
@@ -346,7 +439,10 @@ const homicides = [{
   "date": "2017-07-04T06:00:00.000Z",
   "type": "Police",
   "image": "https://drive.google.com/open?id=12MPy4FqDtVppofIQ8SLCOv0BSzxH-9-2",
-  "allegedMotive": "Possible self-defense"
+  "alleged": "Alleged motive",
+  "motive": "Possible self-defense",
+  "city": "Centerville",
+  "county": "Davis County"
 }, {
   "timestamp": "2017-12-25T03:42:45.055Z",
   "first": "Angelina",
@@ -355,8 +451,11 @@ const homicides = [{
   "summary": "Angelina Costello, 3, of Ogden, was found dead after police say her parents cruelly abused her and left her severely malnourished. When police were called to a residence in the 2800 block of Grant Avenue on a report the girl wasn't breathing, officers reported the girl's body was cold with a thin layer of makeup applied in an apparent attempt to cover burns, bruises and lacerations. Brenda Emile, 23, and Miller Costello, 25, are charged with aggravated murder. Police say videos show the parents taunting the girl with food, then withdrawing it and disciplining her.",
   "location": "41.214410, -111.973425",
   "date": "2017-07-06T06:00:00.000Z",
-  "type": "Abuse or neglect",
-  "allegedMotive": "Unknown domestic"
+  "type": "Abuse",
+  "alleged": "Alleged motive",
+  "motive": "Unknown domestic",
+  "city": "Ogden",
+  "county": "Weber County"
 }, {
   "timestamp": "2017-12-25T03:56:39.165Z",
   "first": "Jason",
@@ -367,7 +466,10 @@ const homicides = [{
   "date": "2017-07-09T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1YTuafmk5FTtJg3VyiTe8LpDFm8_hrCkt",
-  "allegedMotive": "Retaliation"
+  "alleged": "Motive",
+  "motive": "Retaliation",
+  "city": "West Valley City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T04:00:01.363Z",
   "first": "Paige",
@@ -378,7 +480,10 @@ const homicides = [{
   "date": "2017-07-16T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1aV4l3Sjq4WmteqVY3QNAmCNu6wmyJcNe",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Motive",
+  "motive": "Unknown domestic",
+  "city": "Magna",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T04:04:52.197Z",
   "first": "Nancy",
@@ -389,7 +494,10 @@ const homicides = [{
   "date": "2017-07-16T06:00:00.000Z",
   "type": "Strangulation",
   "image": "https://drive.google.com/open?id=1YCb6gewul-mtMCSE3jCSOglVKwA7rvt4",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Motive",
+  "motive": "Unknown domestic",
+  "city": "Salt Lake City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T04:08:28.545Z",
   "first": "Kevin Joseph",
@@ -400,7 +508,10 @@ const homicides = [{
   "date": "2017-07-25T06:00:00.000Z",
   "type": "Assault",
   "image": "https://drive.google.com/open?id=1HuNmkIciJgF20KyDt2O6vEq3LNoPP9hO",
-  "allegedMotive": "Possible mental illness"
+  "alleged": "Motive",
+  "motive": "Possible mental illness",
+  "city": "Salt Lake City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T04:12:11.167Z",
   "first": "Shawn",
@@ -411,7 +522,10 @@ const homicides = [{
   "date": "2017-07-26T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1gl-5VM6ktQQokWsGO6if8VXISkjHUV9Q",
-  "allegedMotive": "Unknown"
+  "alleged": "Alleged motive",
+  "motive": "Unknown",
+  "city": "Salt Lake City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T04:20:33.732Z",
   "first": "Guy Wells",
@@ -422,7 +536,10 @@ const homicides = [{
   "date": "2017-08-02T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1UR0kmJfhgBZYdf5jV3quOHHHn6tWe_bD",
-  "allegedMotive": "Domestic"
+  "alleged": "Alleged motive",
+  "motive": "Domestic",
+  "city": "Duchesne",
+  "county": "Duchesne County"
 }, {
   "timestamp": "2017-12-25T04:24:25.594Z",
   "first": "Romeo",
@@ -433,7 +550,10 @@ const homicides = [{
   "date": "2017-08-03T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=10RWJlxBjE494-xPhScn8oPHlePZGU1BO",
-  "allegedMotive": "Gangs"
+  "alleged": "Motive",
+  "motive": "Gangs",
+  "city": "West Valley City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T04:26:07.101Z",
   "first": "Benjamin",
@@ -443,7 +563,10 @@ const homicides = [{
   "location": "40.764938, -111.905438",
   "date": "2017-08-03T06:00:00.000Z",
   "type": "Shooting",
-  "allegedMotive": "Unknown"
+  "alleged": "Motive",
+  "motive": "Unknown",
+  "city": "Salt Lake City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T04:28:14.851Z",
   "first": "Maria",
@@ -453,7 +576,10 @@ const homicides = [{
   "location": "41.214684, -111.972878",
   "date": "2017-08-13T06:00:00.000Z",
   "type": "Shooting",
-  "allegedMotive": "Unknown"
+  "alleged": "Motive",
+  "motive": "Unknown",
+  "city": "Ogden",
+  "county": "Weber County"
 }, {
   "timestamp": "2017-12-25T04:31:16.632Z",
   "first": "Patrick",
@@ -464,7 +590,10 @@ const homicides = [{
   "date": "2017-08-13T06:00:00.000Z",
   "type": "Police",
   "image": "https://drive.google.com/open?id=1oxtUopuTZaOXWY8fFsddLq131wKV1od4",
-  "allegedMotive": "Justified defense"
+  "alleged": "Motive",
+  "motive": "Justified defense",
+  "city": "Salt Lake City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T04:39:57.815Z",
   "first": "Will",
@@ -475,7 +604,10 @@ const homicides = [{
   "date": "2017-08-19T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=15sH0NwmAJ7dqUTN5TWRWi0ZS2xQbQDYO",
-  "allegedMotive": "Gangs"
+  "alleged": "Motive",
+  "motive": "Gangs",
+  "city": "West Jordan",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-25T04:42:07.818Z",
   "first": "Miraheta",
@@ -486,7 +618,10 @@ const homicides = [{
   "date": "2017-08-20T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1Pq3wWL9MT5KYZpZJCS5Vp5vJNssIBIUU",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Motive",
+  "motive": "Unknown domestic",
+  "city": "West Valley City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-30T01:05:02.894Z",
   "first": "Sukakee",
@@ -497,7 +632,10 @@ const homicides = [{
   "date": "2017-08-23T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1reTTSatypFC2e7NRlsuAL6eTJmfXjRoh",
-  "allegedMotive": "Unknown"
+  "alleged": "Alleged motive",
+  "motive": "Unknown",
+  "city": "Whiterocks",
+  "county": "United States"
 }, {
   "timestamp": "2017-12-25T04:47:04.706Z",
   "first": "Robin",
@@ -508,7 +646,10 @@ const homicides = [{
   "date": "2017-08-24T06:00:00.000Z",
   "type": "Strangulation",
   "image": "https://drive.google.com/open?id=1PFbCnEcQkrTjKIfiMqjo1Gv5VTKCz4Ch",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Motive",
+  "motive": "Unknown domestic",
+  "city": "Spanish Fork",
+  "county": "Utah County"
 }, {
   "timestamp": "2017-12-27T20:43:17.451Z",
   "first": "Jordan Burtell",
@@ -519,7 +660,10 @@ const homicides = [{
   "date": "2017-08-26T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1FMSa7PPMqo8F_oTSoA3badtBrM04Lrjs",
-  "allegedMotive": "Unknown"
+  "alleged": "Alleged motive",
+  "motive": "Unknown",
+  "city": "Midvale",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2018-01-01T00:17:06.122Z",
   "first": "Brandon",
@@ -530,7 +674,10 @@ const homicides = [{
   "date": "2017-09-01T06:00:00.000Z",
   "type": "Assault",
   "image": "https://drive.google.com/open?id=1Jb6m20pzIpM37r58x8yefOUcrGfGmEiw",
-  "allegedMotive": " Anger, domestic"
+  "alleged": "Motive",
+  "motive": " Anger, domestic",
+  "city": "American Fork",
+  "county": "Utah County"
 }, {
   "timestamp": "2017-12-27T18:42:07.421Z",
   "first": "Archer",
@@ -540,7 +687,10 @@ const homicides = [{
   "location": "40.583291, -111.975600",
   "date": "2017-09-04T06:00:00.000Z",
   "type": "Abuse",
-  "allegedMotive": "Anger, drugs, domestic"
+  "alleged": "Alleged motive",
+  "motive": "Anger, drugs, domestic",
+  "city": "West Jordan",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-26T19:30:34.307Z",
   "first": "Brayden",
@@ -551,7 +701,10 @@ const homicides = [{
   "date": "2017-09-07T06:00:00.000Z",
   "type": "Abuse",
   "image": "https://drive.google.com/open?id=1-8sJvb6rVcbCAmEjfnHueHAhie-1QRGB",
-  "allegedMotive": "Anger, domestic"
+  "alleged": "Alleged motive",
+  "motive": "Anger, domestic",
+  "city": "Roy",
+  "county": "Weber County"
 }, {
   "timestamp": "2017-12-26T02:22:49.275Z",
   "first": "Eugene",
@@ -562,18 +715,10 @@ const homicides = [{
   "date": "2017-09-08T06:00:00.000Z",
   "type": "Stabbing",
   "image": "https://drive.google.com/open?id=1XC5aZyrd5eSIttjdgf8MvK9grbkMc3lh",
-  "allegedMotive": "Retaliation"
-}, {
-  "timestamp": "2017-12-26T02:29:40.482Z",
-  "first": "Lloyd Everett",
-  "last": "Pace",
-  "age": 55,
-  "summary": "Bystanders Tami Lynn Woodard, 50, and Lloyd Everett Pace, 55, both of Kearns, were killed as a group fled the scene of a drive-by shooting at 5240 W. 5391 South. Woodward and Pace were in their Toyota Yaris when a fleeing pickup truck slammed into them. Argenis Daniel Ramirez Saedt, 20; Jose Luis Muñoz-Lugo, 24; Jose Humberto Mancia, 17; and Rosalio Andres Alvarez, 20, are each charged with two counts of murder. All four are documented gang members.",
-  "location": "40.653327, -112.015802",
-  "date": "2017-09-19T06:00:00.000Z",
-  "type": "Car crash",
-  "image": "https://drive.google.com/open?id=1qjWPXM0rt3p5_yPe5LWjatlbWNJay5BE",
-  "allegedMotive": "Recklessness, gangs"
+  "alleged": "Alleged motive",
+  "motive": "Retaliation",
+  "city": "Magna",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-26T02:27:50.084Z",
   "first": "Tami Lynn",
@@ -584,7 +729,24 @@ const homicides = [{
   "date": "2017-09-19T06:00:00.000Z",
   "type": "Car crash",
   "image": "https://drive.google.com/open?id=1uFsLeK29neL1FMVd5uzArYWLckr4cJ_m",
-  "allegedMotive": "Recklessness, gangs"
+  "alleged": "Alleged motive",
+  "motive": "Recklessness, gangs",
+  "city": "Kearns",
+  "county": "Salt Lake County"
+}, {
+  "timestamp": "2017-12-26T02:29:40.482Z",
+  "first": "Lloyd Everett",
+  "last": "Pace",
+  "age": 55,
+  "summary": "Bystanders Tami Lynn Woodard, 50, and Lloyd Everett Pace, 55, both of Kearns, were killed as a group fled the scene of a drive-by shooting at 5240 W. 5391 South. Woodward and Pace were in their Toyota Yaris when a fleeing pickup truck slammed into them. Argenis Daniel Ramirez Saedt, 20; Jose Luis Muñoz-Lugo, 24; Jose Humberto Mancia, 17; and Rosalio Andres Alvarez, 20, are each charged with two counts of murder. All four are documented gang members.",
+  "location": "40.653327, -112.015802",
+  "date": "2017-09-19T06:00:00.000Z",
+  "type": "Car crash",
+  "image": "https://drive.google.com/open?id=1qjWPXM0rt3p5_yPe5LWjatlbWNJay5BE",
+  "alleged": "Alleged motive",
+  "motive": "Recklessness, gangs",
+  "city": "Kearns",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-26T02:32:41.592Z",
   "first": "Rick",
@@ -595,7 +757,10 @@ const homicides = [{
   "date": "2017-09-24T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1WbZbAU1WvTlgj5c0MUTdmrQ4fXQ1yLnX",
-  "allegedMotive": "Self-defense"
+  "alleged": "Motive",
+  "motive": "Self-defense",
+  "city": "Garden City",
+  "county": "Rich County"
 }, {
   "timestamp": "2018-01-01T00:21:11.755Z",
   "first": "Baylie",
@@ -606,7 +771,10 @@ const homicides = [{
   "date": "2017-09-27T06:00:00.000Z",
   "type": "Abuse",
   "image": "https://drive.google.com/open?id=1VempKo8B0urOScu3yb7CxN4vaJ1zLHqm",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Motive",
+  "motive": "Unknown domestic",
+  "city": "Wendover",
+  "county": "United States"
 }, {
   "timestamp": "2017-12-26T02:36:20.565Z",
   "first": "Michael Bruce",
@@ -617,7 +785,10 @@ const homicides = [{
   "date": "2017-09-28T06:00:00.000Z",
   "type": "Police",
   "image": "https://drive.google.com/open?id=1336dIp_2qsZTzywGINO7gDQYicDc1rE2",
-  "allegedMotive": "Justified defense"
+  "alleged": "Motive",
+  "motive": "Justified defense",
+  "city": "Salt Lake City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-27T18:44:59.382Z",
   "first": "Deryk",
@@ -628,7 +799,10 @@ const homicides = [{
   "date": "2017-10-07T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1iCaBkMppX-D4kgMhEEXhmn0lv-APMkji",
-  "allegedMotive": "Accidental"
+  "alleged": "Motive",
+  "motive": "Accidental",
+  "city": "Lehi",
+  "county": "Utah County"
 }, {
   "timestamp": "2017-12-27T20:33:57.483Z",
   "first": "Adalberto",
@@ -639,7 +813,10 @@ const homicides = [{
   "date": "2017-10-21T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1Tm2jyZvTQhzmy7v-cx7zD907B7-MbUFD",
-  "allegedMotive": "Possible self-defense"
+  "alleged": "Motive",
+  "motive": "Possible self-defense",
+  "city": "Ogden",
+  "county": "Weber County"
 }, {
   "timestamp": "2017-12-26T02:39:27.750Z",
   "first": "Joshua",
@@ -650,7 +827,10 @@ const homicides = [{
   "date": "2017-10-22T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1MfFqVIHPMpFm9yS2tJ58O1LF9OG1l5Uh",
-  "allegedMotive": "Unknown"
+  "alleged": "Motive",
+  "motive": "Unknown",
+  "city": "Kearns",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-26T02:54:19.293Z",
   "first": "Ever",
@@ -661,7 +841,10 @@ const homicides = [{
   "date": "2017-10-25T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1VJga4Bcv4zq7jnPOYCy8vE9Z0wPD2ncJ",
-  "allegedMotive": "Drugs"
+  "alleged": "Motive",
+  "motive": "Drugs",
+  "city": "Murray",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-26T03:00:48.134Z",
   "first": "ChenWei",
@@ -672,17 +855,10 @@ const homicides = [{
   "date": "2017-10-30T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=10TF5fwT-FF2C3N2ruaQysPYJRSQs7cBZ",
-  "allegedMotive": "Robbery"
-}, {
-  "timestamp": "2017-12-26T03:08:45.016Z",
-  "first": "Cody D.",
-  "last": "Henderson",
-  "age": 27,
-  "summary": "The body of Cody D. Henderson, 27, of Ohio, was found in the garage of Chay Lance Blair, 25, at 435 S. Main. Police say Henderson had been tied up with ropes and beaten. Blair was arrested following a chase in Idaho and charged with murder and desecration of a body.",
-  "location": "41.401642, -112.033552",
-  "date": "2017-11-01T06:00:00.000Z",
-  "type": "Assault",
-  "allegedMotive": "Unknown"
+  "alleged": "Alleged motive",
+  "motive": "Robbery",
+  "city": "Salt Lake City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-26T03:28:49.371Z",
   "first": "Dan",
@@ -693,7 +869,23 @@ const homicides = [{
   "date": "2017-11-01T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1zuD0ur0Q0rntj4vxBMkHTEfndeKIXk04",
-  "allegedMotive": "Retaliation"
+  "alleged": "Motive",
+  "motive": "Retaliation",
+  "city": "West Jordan",
+  "county": "Salt Lake County"
+}, {
+  "timestamp": "2017-12-26T03:08:45.016Z",
+  "first": "Cody D.",
+  "last": "Henderson",
+  "age": 27,
+  "summary": "The body of Cody D. Henderson, 27, of Ohio, was found in the garage of Chay Lance Blair, 25, at 435 S. Main. Police say Henderson had been tied up with ropes and beaten. Blair was arrested following a chase in Idaho and charged with murder and desecration of a body.",
+  "location": "41.401642, -112.033552",
+  "date": "2017-11-01T06:00:00.000Z",
+  "type": "Assault",
+  "alleged": "Alleged motive",
+  "motive": "Unknown",
+  "city": "Willard",
+  "county": "Box Elder County"
 }, {
   "timestamp": "2017-12-26T03:32:35.369Z",
   "first": "Keri \"KC\"",
@@ -704,7 +896,10 @@ const homicides = [{
   "date": "2017-11-02T06:00:00.000Z",
   "type": "Stabbing",
   "image": "https://drive.google.com/open?id=1KYzwhJwIimVNYLG5lF89XkSMrre6MZuT",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Alleged motive",
+  "motive": "Unknown domestic",
+  "city": "Park City",
+  "county": "Summit County"
 }, {
   "timestamp": "2017-12-26T03:35:36.422Z",
   "first": "Diane",
@@ -715,7 +910,10 @@ const homicides = [{
   "date": "2017-11-04T06:00:00.000Z",
   "type": "Stabbing",
   "image": "https://drive.google.com/open?id=1PfsT-Ng3S2cB9DFoiDQmey1AZKFCBzEX",
-  "allegedMotive": "Domestic, possible mental illness"
+  "alleged": "Alleged motive",
+  "motive": "Domestic, possible mental illness",
+  "city": "Holladay",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-26T03:34:26.606Z",
   "first": "Robert",
@@ -726,7 +924,10 @@ const homicides = [{
   "date": "2017-11-04T06:00:00.000Z",
   "type": "Stabbing",
   "image": "https://drive.google.com/open?id=1ty09v1jpcRv6mPAIMhIawL2_mqUi0BOU",
-  "allegedMotive": "Domestic, possible mental illness"
+  "alleged": "Alleged motive",
+  "motive": "Domestic, possible mental illness",
+  "city": "Holladay",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-26T03:37:39.816Z",
   "first": "Colby Scott",
@@ -737,18 +938,10 @@ const homicides = [{
   "date": "2017-11-05T06:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1FGpQ5Acc_y0BSes8bmQsSnqArd8j1xPL",
-  "allegedMotive": "Fight"
-}, {
-  "timestamp": "2017-12-26T03:42:06.799Z",
-  "first": "Alexandre",
-  "last": "Griffith",
-  "age": 5,
-  "summary": "Timothy Griffith, 45, shot his wife, Jessica Griffith, 42; his stepdaughter, Samantha Badel, 16; and his son, Alexandre Griffith, 5, before taking a different gun and shooting himself. He also killed the family dog. Their bodies were found in their home, 1502 N. Highway 89, after a concerned neighbor called police because the family hadn't been seen for a few days. The family moved to Utah from Switzerland four months earlier for Timothy Griffith's job.",
-  "location": "40.116719, -111.597733",
-  "date": "2017-11-10T07:00:00.000Z",
-  "type": "Shooting",
-  "image": "https://drive.google.com/open?id=1rqmVp6Xzd0O45AOq2MSyFzat14hNrjV-",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Alleged motive",
+  "motive": "Fight",
+  "city": "West Point",
+  "county": "Davis County"
 }, {
   "timestamp": "2017-12-26T03:39:35.581Z",
   "first": "Jessica",
@@ -759,7 +952,10 @@ const homicides = [{
   "date": "2017-11-10T07:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=12yO-3sYYctkUI19nY7rBLFmzu_L_hyzs",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Alleged motive",
+  "motive": "Unknown domestic",
+  "city": "Springville",
+  "county": "Utah County"
 }, {
   "timestamp": "2017-12-26T03:40:40.167Z",
   "first": "Samantha",
@@ -770,7 +966,24 @@ const homicides = [{
   "date": "2017-11-10T07:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=13usJK6mdeXx00slOUqwXVAAq23mGetmm",
-  "allegedMotive": "Unknown domestic"
+  "alleged": "Motive",
+  "motive": "Unknown domestic",
+  "city": "Springville",
+  "county": "Utah County"
+}, {
+  "timestamp": "2017-12-26T03:42:06.799Z",
+  "first": "Alexandre",
+  "last": "Griffith",
+  "age": 5,
+  "summary": "Timothy Griffith, 45, shot his wife, Jessica Griffith, 42; his stepdaughter, Samantha Badel, 16; and his son, Alexandre Griffith, 5, before taking a different gun and shooting himself. He also killed the family dog. Their bodies were found in their home, 1502 N. Highway 89, after a concerned neighbor called police because the family hadn't been seen for a few days. The family moved to Utah from Switzerland four months earlier for Timothy Griffith's job.",
+  "location": "40.116719, -111.597733",
+  "date": "2017-11-10T07:00:00.000Z",
+  "type": "Shooting",
+  "image": "https://drive.google.com/open?id=1rqmVp6Xzd0O45AOq2MSyFzat14hNrjV-",
+  "alleged": "Motive",
+  "motive": "Unknown domestic",
+  "city": "Springville",
+  "county": "Utah County"
 }, {
   "timestamp": "2017-12-27T18:53:24.425Z",
   "first": "Michael",
@@ -781,7 +994,10 @@ const homicides = [{
   "date": "2017-11-20T07:00:00.000Z",
   "type": "Unknown",
   "image": "https://drive.google.com/open?id=1BtwigE1wrp4IdO6T93jJYlk8DqExaeYW",
-  "allegedMotive": "Unknown"
+  "alleged": "Motive",
+  "motive": "Unknown",
+  "city": "Sandy",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-26T03:45:10.276Z",
   "first": "Hunter",
@@ -792,7 +1008,10 @@ const homicides = [{
   "date": "2017-11-21T07:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1fY8mrX-JuAWaSNbUt9ja6h4gwugZuP4l",
-  "allegedMotive": "Drugs"
+  "alleged": "Motive",
+  "motive": "Drugs",
+  "city": "Sunset",
+  "county": "Davis County"
 }, {
   "timestamp": "2017-12-26T03:48:00.324Z",
   "first": "Mechelle",
@@ -803,7 +1022,10 @@ const homicides = [{
   "date": "2017-11-28T07:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1AhuamHPx_9nIdCY58T8YkGHLY3sWuwVc",
-  "allegedMotive": "Possible drugs or mental illness"
+  "alleged": "Alleged motive",
+  "motive": "Possible drugs or mental illness",
+  "city": "Salt Lake City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-27T18:57:44.835Z",
   "first": "Brian Sean",
@@ -814,18 +1036,10 @@ const homicides = [{
   "date": "2017-11-30T07:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1cxf1Nd-wiLg37H2655FcDL53rXjV_WHd",
-  "allegedMotive": "Unknown"
-}, {
-  "timestamp": "2017-12-26T03:51:16.362Z",
-  "first": "Linton",
-  "last": "Livingston",
-  "age": 67,
-  "summary": "Linton Livingston, 67, died 17 days after police say his neighbor stabbed him 12 times in the neck and head with a pair of scissors on Nov. 15. Dyann Mariel Hernandez, 23, is accused of walking out of her own home and attacking Livingston as he stood on his front porch in the 800 block of Arapahoe Avenue. Hernandez is charged with murder.",
-  "location": "40.755265, -111.914083",
-  "date": "2017-12-02T07:00:00.000Z",
-  "type": "Stabbing",
-  "image": "https://drive.google.com/open?id=1VbPC16Y5L62a5ZsvD3Lf0DphgDN0HcGv",
-  "allegedMotive": "Unknown"
+  "alleged": "Motive",
+  "motive": "Unknown",
+  "city": "Ogden",
+  "county": "Weber County"
 }, {
   "timestamp": "2017-12-26T19:42:22.187Z",
   "first": "Hudson",
@@ -836,7 +1050,24 @@ const homicides = [{
   "date": "2017-12-02T07:00:00.000Z",
   "type": "Abuse",
   "image": "https://drive.google.com/open?id=1u9QMh_r47neXhaYAwaY9c1DLO1CrDtLg",
-  "allegedMotive": "Anger, domestic"
+  "alleged": "Motive",
+  "motive": "Anger, domestic",
+  "city": "Clearfield",
+  "county": "Davis County"
+}, {
+  "timestamp": "2017-12-26T03:51:16.362Z",
+  "first": "Linton",
+  "last": "Livingston",
+  "age": 67,
+  "summary": "Linton Livingston, 67, died 17 days after police say his neighbor stabbed him 12 times in the neck and head with a pair of scissors on Nov. 15. Dyann Mariel Hernandez, 23, is accused of walking out of her own home and attacking Livingston as he stood on his front porch in the 800 block of Arapahoe Avenue. Hernandez is charged with murder.",
+  "location": "40.755265, -111.914083",
+  "date": "2017-12-02T07:00:00.000Z",
+  "type": "Stabbing",
+  "image": "https://drive.google.com/open?id=1VbPC16Y5L62a5ZsvD3Lf0DphgDN0HcGv",
+  "alleged": "Motive",
+  "motive": "Unknown",
+  "city": "Salt Lake City",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-26T03:54:18.957Z",
   "first": "Toussaint \"TJ\" L'Ouverture",
@@ -847,7 +1078,10 @@ const homicides = [{
   "date": "2017-12-10T07:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1aHkkNEUWc1iynowPEinjrkgQVePOlTQG",
-  "allegedMotive": "Retaliation"
+  "alleged": "Alleged motive",
+  "motive": "Retaliation",
+  "city": "Taylorsville",
+  "county": "Salt Lake County"
 }, {
   "timestamp": "2017-12-27T18:48:17.095Z",
   "first": "Marley",
@@ -858,5 +1092,21 @@ const homicides = [{
   "date": "2017-12-10T07:00:00.000Z",
   "type": "Shooting",
   "image": "https://drive.google.com/open?id=1ZW8ezvAaGAYG2ot4u-aMv6lM7fUH2kAx",
-  "allegedMotive": "Accidental"
+  "alleged": "Alleged motive",
+  "motive": "Accidental",
+  "city": "Ballard",
+  "county": "Uintah County"
+}, {
+  "timestamp": "2018-01-02T01:04:07.626Z",
+  "first": "Madison",
+  "last": "Clark",
+  "age": 9,
+  "summary": "Madison Clark, 9,  was shot by her mother in the Magna home they shared at 2665 S. 8990 West. Karina Clark, 41, then turn the gun on herself. Their bodies were discovered New Year’s Eve after a neighbor asked officers to perform a welfare check. Police say they had been dead for a week and possibly longer. ",
+  "location": "40.711629, -112.105859",
+  "date": "2017-12-31T07:00:00.000Z",
+  "type": "Shooting",
+  "image": "https://drive.google.com/open?id=11hTvESKv2KlCxatiQkmrDOQy_Tnpa6oQ",
+  "motive": "Unknown domestic",
+  "city": "Magna",
+  "county": "Salt Lake County"
 }];
