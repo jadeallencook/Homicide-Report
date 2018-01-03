@@ -28,16 +28,17 @@
         date: [],
         type: []
       }
+      this.search.county.push('All');
+      this.search.type.push('All');
       for (let homicide of this.homicides) {
-        if (this.search.type.indexOf(homicide.type) === -1) {
-          this.search.type.push(homicide.type);
-        }
         if (this.search.county.indexOf(homicide.county) === -1) this.search.county.push(homicide.county);
         if (this.search.type.indexOf(homicide.type) === -1) this.search.type.push(homicide.type);
       }
-      this.search.date = this.calendarMonths;
+      this.search.date.push('All');
+      for (let month of this.calendarMonths) {
+        this.search.date.push(month);
+      }
       this.createSearchDropdowns();
-      this.search.date = this.calendarMonths;
       // init process
       this.showVictims(this.homicides);
       this.showHomicide(this.homicides[0]);
@@ -68,7 +69,7 @@
       document.getElementById('search-county').addEventListener('click', (event) => {
         const county = event.target.getAttribute('value');
         this.refined = [];
-        if (county) {
+        if (county && county !== 'All') {
           for (let homicide of this.homicides) {
             if (homicide.county === county) {
               this.refined.push(homicide);
@@ -76,14 +77,17 @@
           }
           this.showVictims();
           document.querySelector('div#search-county div.search-dropdown-content').style.display = 'none';
+        } else if (county === 'All') {
+          this.refined = this.homicides;
+          document.querySelector('div#search-county div.search-dropdown-content').style.display = 'none';
+          this.showVictims();
         } else {
           document.querySelector('div#search-county div.search-dropdown-content').style.display = 'block';
         }
       });
       document.getElementById('search-date').addEventListener('click', (event) => {
         const date = event.target.getAttribute('value');
-        console.log(date);
-        if (date) {
+        if (date && date !== 'All') {
           this.refined = [];
           for (let homicide of this.homicides) {
             if (date === this.calendarMonths[new Date(homicide.date).getMonth()]) {
@@ -92,13 +96,17 @@
           }
           this.showVictims();
           document.querySelector('div#search-date div.search-dropdown-content').style.display = 'none';
+        } else if (date === 'All') {
+          this.refined = this.homicides;
+          document.querySelector('div#search-date div.search-dropdown-content').style.display = 'none';
+          this.showVictims();
         } else {
           document.querySelector('div#search-date div.search-dropdown-content').style.display = 'block';
         }
       });
       document.getElementById('search-type').addEventListener('click', (event) => {
         const type = event.target.getAttribute('value');
-        if (type) {
+        if (type && type !== 'All') {
           this.refined = [];
           for (let homicide of this.homicides) {
             if (type === homicide.type) {
@@ -107,6 +115,10 @@
           }
           this.showVictims();
           document.querySelector('div#search-type div.search-dropdown-content').style.display = 'none';
+        } else if (type === 'All') {
+          this.refined = this.homicides;
+          document.querySelector('div#search-type div.search-dropdown-content').style.display = 'none';
+          this.showVictims();
         } else {
           document.querySelector('div#search-type div.search-dropdown-content').style.display = 'block';
         }

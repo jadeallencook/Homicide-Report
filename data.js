@@ -262,7 +262,7 @@ const homicides = [{
   "alleged": "Alleged motive",
   "motive": "Suicide assist",
   "city": "Payson",
-  "county": "United States"
+  "county": "Utah County"
 }, {
   "timestamp": "2017-12-25T02:54:18.899Z",
   "first": "Roger",
@@ -289,7 +289,7 @@ const homicides = [{
   "alleged": "Motive",
   "motive": "Unknown domestic",
   "city": "Montezuma Creek",
-  "county": "United States"
+  "county": "San Juan County"
 }, {
   "timestamp": "2017-12-25T02:55:56.182Z",
   "first": "Fernanda",
@@ -400,7 +400,7 @@ const homicides = [{
   "alleged": "Motive",
   "motive": "Unknown",
   "city": "Altamont",
-  "county": "United States"
+  "county": "Duchesne County"
 }, {
   "timestamp": "2017-12-25T03:27:45.634Z",
   "first": "Richelle",
@@ -635,7 +635,7 @@ const homicides = [{
   "alleged": "Alleged motive",
   "motive": "Unknown",
   "city": "Whiterocks",
-  "county": "United States"
+  "county": "Uintah County"
 }, {
   "timestamp": "2017-12-25T04:47:04.706Z",
   "first": "Robin",
@@ -774,7 +774,7 @@ const homicides = [{
   "alleged": "Motive",
   "motive": "Unknown domestic",
   "city": "Wendover",
-  "county": "United States"
+  "county": "Tooele County"
 }, {
   "timestamp": "2017-12-26T02:36:20.565Z",
   "first": "Michael Bruce",
