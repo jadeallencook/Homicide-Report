@@ -1753,10 +1753,16 @@
       });
       // top photos
       document.getElementById('previous-homicide-photo').addEventListener('click', () => {
-        this.updateTopPhotos(-1);
+        this.profileID--;
+        if (this.profileID >= this.homicides.length) this.profileID = 0;
+        else if (this.profileID < 0) this.profileID = this.homicides.length - 1;
+        this.showHomicide(this.homicides[this.profileID]);
       });
       document.getElementById('next-homicide-photo').addEventListener('click', () => {
-        this.updateTopPhotos(1);
+        this.profileID++;
+        if (this.profileID >= this.homicides.length) this.profileID = 0;
+        else if (this.profileID < 0) this.profileID = this.homicides.length - 1;
+        this.showHomicide(this.homicides[this.profileID]);
       });
       document.addEventListener('click', (event) => {
         // get id for chrome and safari
