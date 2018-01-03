@@ -1716,6 +1716,8 @@
       this.initLoad = true;
       this.googleURL = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=';
       this.googleAPI = '&key=AIzaSyCXllb7HBvBT_nv5jF0dxjaRAo4T6D34xw';
+      this.map = null;
+      this.marker = null;
       // calendar build vars
       this.calendarMonths = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
       this.currentMonth = 0;
@@ -1965,14 +1967,23 @@
     }
     // generate google map
     createMap(coordinates) {
-      const map = new google.maps.Map(this.elems.map, {
-        zoom: 9,
-        center: coordinates
-      });
-      const marker = new google.maps.Marker({
-        position: coordinates,
-        map: map
-      });
+      if (!this.map) {
+        this.map = new google.maps.Map(this.elems.map, {
+          zoom: 9,
+          center: coordinates
+        });
+        this.marker = new google.maps.Marker({
+          position: coordinates,
+          map: this.map
+        });
+      } else {
+        this.marker.setMap(null);
+        this.marker = new google.maps.Marker({
+          position: coordinates,
+          map: this.map
+        });
+        this.map.panTo(coordinates);
+      }
     }
     // get photo url from google
     getPhotoURL(url) {
