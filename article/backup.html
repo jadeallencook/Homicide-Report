@@ -484,19 +484,19 @@
           <!-- bio tags -->
           <div id="tag-wrapper">
             <div class="bio-tag">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span class="fa fa-map-marker" aria-hidden="true"></span>
               <span id="current-homicide-county"></span>
             </div>
             <div class="bio-tag">
-              <i class="fa fa-location-arrow" aria-hidden="true"></i>
+              <span class="fa fa-location-arrow" aria-hidden="true"></span>
               <span id="current-homicide-town"></span>
             </div>
             <div class="bio-tag">
-              <i class="fa fa-calendar-o" aria-hidden="true"></i>
+              <span class="fa fa-calendar-o" aria-hidden="true"></span>
               <span id="current-homicide-date"></span>
             </div>
             <div class="bio-tag">
-              <i class="fa fa-bolt" aria-hidden="true"></i>
+              <span class="fa fa-bolt" aria-hidden="true"></span>
               <span id="current-homicide-type"></span>
             </div>
             <span id="current-homicide-summary"></span>
@@ -545,7 +545,7 @@
         <div class="row" id="search-homicides-wrapper">
           <div class="col-4">
             <div class="homicide-tag homicide-search" id="search-county">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span class="fa fa-map-marker" aria-hidden="true"></span>
               County
               <div class="search-dropdown-content">
                 <ul id="search-county-list"></ul>
@@ -554,7 +554,7 @@
           </div>
           <div class="col-4">
             <div class="homicide-tag homicide-search" id="search-date">
-              <i class="fa fa-calendar-o" aria-hidden="true"></i>
+              <span class="fa fa-calendar-o" aria-hidden="true"></span>
               Date
               <div class="search-dropdown-content">
                 <ul id="search-date-list"></ul>
@@ -563,7 +563,7 @@
           </div>
           <div class="col-4">
             <div class="homicide-tag homicide-search" id="search-type">
-              <i class="fa fa-bolt" aria-hidden="true"></i>
+              <span class="fa fa-bolt" aria-hidden="true"></span>
               Type
               <div class="search-dropdown-content">
                 <ul id="search-type-list"></ul>
@@ -1716,6 +1716,8 @@
       this.initLoad = true;
       this.googleURL = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=';
       this.googleAPI = '&key=AIzaSyCXllb7HBvBT_nv5jF0dxjaRAo4T6D34xw';
+      this.map = null;
+      this.marker = null;
       // calendar build vars
       this.calendarMonths = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
       this.currentMonth = 0;
@@ -1965,14 +1967,23 @@
     }
     // generate google map
     createMap(coordinates) {
-      const map = new google.maps.Map(this.elems.map, {
-        zoom: 9,
-        center: coordinates
-      });
-      const marker = new google.maps.Marker({
-        position: coordinates,
-        map: map
-      });
+      if (!this.map) {
+        this.map = new google.maps.Map(this.elems.map, {
+          zoom: 9,
+          center: coordinates
+        });
+        this.marker = new google.maps.Marker({
+          position: coordinates,
+          map: this.map
+        });
+      } else {
+        this.marker.setMap(null);
+        this.marker = new google.maps.Marker({
+          position: coordinates,
+          map: this.map
+        });
+        this.map.panTo(coordinates);
+      }
     }
     // get photo url from google
     getPhotoURL(url) {
