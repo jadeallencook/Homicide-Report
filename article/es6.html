@@ -1788,7 +1788,7 @@
         document.getElementById('filter-county-text').innerText = 'All';
         document.getElementById('filter-date-text').innerText = 'All';
         document.getElementById('filter-type-text').innerText = 'All';
-        document.getElementById(id).innerText = text;
+        if (id) document.getElementById(id).innerText = text;
       }
       document.getElementById('search-county').addEventListener('click', (event) => {
         const county = event.target.getAttribute('value');
@@ -1806,6 +1806,7 @@
           this.refined = this.homicides;
           document.querySelector('div#search-county div.search-dropdown-content').style.display = 'none';
           this.showVictims();
+          updateFilterText();
         } else {
           document.querySelector('div#search-county div.search-dropdown-content').style.display = 'block';
         }
@@ -1827,6 +1828,7 @@
           this.refined = this.homicides;
           document.querySelector('div#search-date div.search-dropdown-content').style.display = 'none';
           this.showVictims();
+          updateFilterText();
         } else {
           document.querySelector('div#search-date div.search-dropdown-content').style.display = 'block';
         }
@@ -1847,6 +1849,7 @@
           this.refined = this.homicides;
           document.querySelector('div#search-type div.search-dropdown-content').style.display = 'none';
           this.showVictims();
+          updateFilterText();
         } else {
           document.querySelector('div#search-type div.search-dropdown-content').style.display = 'block';
         }

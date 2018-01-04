@@ -344,6 +344,7 @@
     height: 50px;
     border: solid thin #333;
     white-space: nowrap;
+    overflow: hidden;
   }
 
   div.timeline-arrow {
@@ -546,7 +547,7 @@
           <div class="col-4">
             <div class="homicide-tag homicide-search" id="search-county">
               <span class="fa fa-map-marker" aria-hidden="true"></span>
-              County
+              <span id="filter-county-text">County</span>
               <div class="search-dropdown-content">
                 <ul id="search-county-list"></ul>
               </div>
@@ -555,7 +556,7 @@
           <div class="col-4">
             <div class="homicide-tag homicide-search" id="search-date">
               <span class="fa fa-calendar-o" aria-hidden="true"></span>
-              Date
+              <span id="filter-date-text">Date</span>
               <div class="search-dropdown-content">
                 <ul id="search-date-list"></ul>
               </div>
@@ -564,7 +565,7 @@
           <div class="col-4">
             <div class="homicide-tag homicide-search" id="search-type">
               <span class="fa fa-bolt" aria-hidden="true"></span>
-              Type
+              <span id="filter-type-text">Type</span>
               <div class="search-dropdown-content">
                 <ul id="search-type-list"></ul>
               </div>
@@ -1783,6 +1784,12 @@
         }
       });
       // add search event listeners
+      function updateFilterText(id, text) {
+        document.getElementById('filter-county-text').innerText = 'All';
+        document.getElementById('filter-date-text').innerText = 'All';
+        document.getElementById('filter-type-text').innerText = 'All';
+        if (id) document.getElementById(id).innerText = text;
+      }
       document.getElementById('search-county').addEventListener('click', (event) => {
         const county = event.target.getAttribute('value');
         this.refined = [];
@@ -1794,13 +1801,16 @@
           }
           this.showVictims();
           document.querySelector('div#search-county div.search-dropdown-content').style.display = 'none';
+          updateFilterText('filter-county-text', county);
         } else if (county === 'All') {
           this.refined = this.homicides;
           document.querySelector('div#search-county div.search-dropdown-content').style.display = 'none';
           this.showVictims();
+          updateFilterText();
         } else {
           document.querySelector('div#search-county div.search-dropdown-content').style.display = 'block';
         }
+        console.log();
       });
       document.getElementById('search-date').addEventListener('click', (event) => {
         const date = event.target.getAttribute('value');
@@ -1813,10 +1823,12 @@
           }
           this.showVictims();
           document.querySelector('div#search-date div.search-dropdown-content').style.display = 'none';
+          updateFilterText('filter-date-text', date);
         } else if (date === 'All') {
           this.refined = this.homicides;
           document.querySelector('div#search-date div.search-dropdown-content').style.display = 'none';
           this.showVictims();
+          updateFilterText();
         } else {
           document.querySelector('div#search-date div.search-dropdown-content').style.display = 'block';
         }
@@ -1832,10 +1844,12 @@
           }
           this.showVictims();
           document.querySelector('div#search-type div.search-dropdown-content').style.display = 'none';
+          updateFilterText('filter-type-text', type);
         } else if (type === 'All') {
           this.refined = this.homicides;
           document.querySelector('div#search-type div.search-dropdown-content').style.display = 'none';
           this.showVictims();
+          updateFilterText();
         } else {
           document.querySelector('div#search-type div.search-dropdown-content').style.display = 'block';
         }
@@ -1939,7 +1953,7 @@
         const homicide = this.homicides[x],
           month = new Date(homicide.date).getMonth(),
           day = new Date(homicide.date).getDate(),
-          left = ((day / 31) * 90) + '%';
+          left = ((day / 31) * 85) + '%';
         // set dot color
         let backgroundColor = 'blue';
         if (homicide.type === 'Car crash') {
