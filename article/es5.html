@@ -2064,9 +2064,8 @@
         var _iteratorNormalCompletion7 = true;
         var _didIteratorError7 = false;
         var _iteratorError7 = undefined;
-
-        for (var x = 0, max = monthContainers.length; x < max; x++) {
-          var container = monthContainers[x];
+        for (var x = startMonth, max = startMonth + monthContainers.length; x < max; x++) {
+          var container = monthContainers[x - startMonth];
           container.innerText = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'][x];
         }
   
