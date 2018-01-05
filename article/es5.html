@@ -141,6 +141,7 @@
       }
     }
   </style>
+
   <style>
     div#homicide-plugin-wrapper {
       width: 100%;
@@ -579,10 +580,12 @@
       </div>
     </div>
   </div>
+
+  <div id="meta-data-export"></div>
   
   <!-- js -->
   <script>
-    const homicides = [{
+    var homicides = [{
       "timestamp": "2017-11-26T22:43:20.341Z",
       "first": "Michael",
       "last": "Green",
@@ -1695,7 +1698,9 @@
       "county": "Salt Lake County"
     }];
   </script>
+
   <script>
+
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
   
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2222,3 +2227,15 @@
   }
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXllb7HBvBT_nv5jF0dxjaRAo4T6D34xw&callback=initHomicideApp"></script>
+
+  <script>
+    for (var x = 0, max = homicides.length; x < max; x++) {
+      var container = document.getElementById('meta-data-export');
+      var homicide = homicides[x];
+      var html = '<div itemprop="homicide victim" itemscope>';
+      html += '<meta itemprop="name" content="' + homicide.first + ' ' + homicide.last + '" />';
+      html += '<meta itemprop="summary" content="' + homicide.summary + '" />';
+      html += '</div>';
+      container.innerHTML += html;
+    }
+  </script>
