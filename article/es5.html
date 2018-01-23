@@ -2232,10 +2232,8 @@
     for (var x = 0, max = homicides.length; x < max; x++) {
       var container = document.getElementById('meta-data-export');
       var homicide = homicides[x];
-      var html = '<div itemprop="homicide victim" itemscope>';
-      html += '<meta key="name" value="' + homicide.first + ' ' + homicide.last + '" />';
+      var html = '<meta key="name" value="' + homicide.first + ' ' + homicide.last + '" />';
       html += '<meta key="summary" value="' + homicide.summary + '" />';
-      html += '</div>';
       container.innerHTML += html;
     }
   </script>
