@@ -2233,8 +2233,8 @@
       var container = document.getElementById('meta-data-export');
       var homicide = homicides[x];
       var html = '<div itemprop="homicide victim" itemscope>';
-      html += '<meta itemprop="name" content="' + homicide.first + ' ' + homicide.last + '" />';
-      html += '<meta itemprop="summary" content="' + homicide.summary + '" />';
+      html += '<meta key="name" value="' + homicide.first + ' ' + homicide.last + '" />';
+      html += '<meta key="summary" value="' + homicide.summary + '" />';
       html += '</div>';
       container.innerHTML += html;
     }
