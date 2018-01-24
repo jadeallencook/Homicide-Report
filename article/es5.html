@@ -2229,11 +2229,19 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXllb7HBvBT_nv5jF0dxjaRAo4T6D34xw&callback=initHomicideApp"></script>
 
   <script>
-    for (var x = 0, max = homicides.length; x < max; x++) {
+    (function() {
       var container = document.getElementById('meta-data-export');
-      var homicide = homicides[x];
-      var html = '<meta key="name" value="' + homicide.first + ' ' + homicide.last + '" />';
-      html += '<meta key="summary" value="' + homicide.summary + '" />';
+      var html = '<!--';
+      html += '<PageMap>';
+      for (var x = 0, max = homicides.length; x < max; x++) {
+        var homicide = homicides[x];
+        html += '<DataObject type="document">';
+        html += '<Attribute name="name" value="' + homicide.first + ' ' + homicide.last + '" />';
+        html += '<Attribute name="summary" value="' + homicide.summary.replace('"', '\"') + '" />';
+        html += '</DataObject>';
+      }
+      html += '</PageMap>'
+      html += '-->';
       container.innerHTML += html;
-    }
+    })();
   </script>
