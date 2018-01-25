@@ -581,7 +581,7 @@
     </div>
   </div>
 
-  <div id="meta-data-export"></div>
+  <script type="application/ld+json">{"@context": "http://schema.org/","@type": "Person","name": ["Michael Green", "Louann  Anderton", "Ernest Pepe  Martinez", "Gregory Vandemerwe", "Elaine Manning", "Bryan Brooks", "Tristen Mogadam", "Melvin Dyer", "Bartolo Justice  Sambrano", "Nicolas Sanchez", "Barry Michael Zumwalt", "Gustavo Ramirez", "Chad Elwood Conrad", "Puleaga Danny Tupu", "Kammy Edmunds", "Matthew Holt", "Maria Alegandra Ayala", "Gaej Dia", "Jchandra Brown", "Roger Haven", "William Nakai", "Fernanda Aranda", "Kathie Thomas", "Memorez Rackley", "Jase Rackley", "Jeremy Hardman", "Thomas Dunn", "Sandra Nickells", "Eli Ray Poowegup", "Richelle Horsley", "Jill Lloyd", "Cody Ray McCray", "Angelina Costello", "Jason Bull", "Paige Espinoza", "Nancy May", "Kevin Joseph McCann", "Shawn Manymules", "Guy Wells Mecham", "Romeo Rodriguez", "Benjamin Moncada-Rivas", "Maria Sanchez", "Patrick Harmon", "Will Ryan", "Miraheta Skender", "Sukakee Manyhides", "Robin Nichols", "Jordan Burtell Moultan", "Brandon Bourgeois", "Archer Sullivan", "Brayden Graves", "Eugene Rowland", "Tami Lynn Woodard", "Lloyd Everett Pace", "Rick Bywater", "Baylie Rutherford", "Michael Bruce Peterson", "Deryk Lowe", "Adalberto Farias-Diaz", "Joshua Belen", "Ever Hernandez", "ChenWei Guo", "Dan Zuniga-Guzman", "Cody D. Henderson", "Keri KC McClanahan", "Diane Liddiard", "Robert Liddiard", "Colby Scott Barney", "Jessica Griffith", "Samantha Badel", "Alexandre Griffith", "Michael Hoffman", "Hunter Woodsen", "Mechelle Lindberg", "Brian Sean Housely", "Hudson Nokes", "Linton Livingston", "Toussaint TJ L'Ouverture Tyler", "Marley Parrish", "Madison Clark"]}</script>
   
   <!-- js -->
   <script>
@@ -2227,21 +2227,3 @@
   }
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXllb7HBvBT_nv5jF0dxjaRAo4T6D34xw&callback=initHomicideApp"></script>
-
-  <script>
-    (function() {
-      var container = document.getElementById('meta-data-export');
-      var html = '<!--';
-      html += '<PageMap>';
-      for (var x = 0, max = homicides.length; x < max; x++) {
-        var homicide = homicides[x];
-        html += '<DataObject type="document">';
-        html += '<Attribute name="name" value="' + homicide.first + ' ' + homicide.last + '" />';
-        html += '<Attribute name="summary" value="' + homicide.summary.replace('"', '\"') + '" />';
-        html += '</DataObject>';
-      }
-      html += '</PageMap>'
-      html += '-->';
-      container.innerHTML += html;
-    })();
-  </script>
